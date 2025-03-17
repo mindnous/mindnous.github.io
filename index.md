@@ -1,10 +1,10 @@
 ---
 layout: home
 title: Home
-landing-title: 'Hi, my name is Forty'
+landing-title: 'mindnous - practical AI on the edge'
 description: null
-image: null
-author: null
+image:
+author: Brilian
 show_tile: false
 ---
 
