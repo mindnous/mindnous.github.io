@@ -249,6 +249,54 @@ models:
             value: footer
       - type: string
         name: bodyClass
+  blog:
+    type: page
+    label: Blog
+    folder: _blogs
+    fields:
+      - type: string
+        name: title
+      - type: date
+        name: date
+      - type: boolean
+        name: draft
+      - type: boolean
+        name: featured
+      - type: number
+        name: weight
+      - type: enum
+        name: layout
+        options:
+          - label: service
+            value: service
+  blogs:
+    type: page
+    label: Blog Overview
+    file: blogs.md
+    singleInstance: true
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+        required: true
+      - type: image
+        name: intro_image
+        label: Intro Image
+        description: Image displayed at in the pages intro section
+      - type: boolean
+        name: intro_image_absolute
+        label: Intro Image Position
+        description: Should the image overflow or be contained
+      - type: boolean
+        name: intro_image_hide_on_mobile
+        label: Intro Image Hide On Mobile
+        description: Hide the intro image on mobile screen sizes
+      - type: enum
+        name: layout
+        options:
+          - label: services
+            value: services
   service:
     type: page
     label: Service

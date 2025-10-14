@@ -3,8 +3,11 @@
 ---
 
 // Colors
-$primary: #E5261F;
-$secondary: #f88379;
+// $primary: #E5261F;
+// $secondary: #f88379;
+// $primary: #000080;
+$primary: #6BA2D4;
+$secondary: #0080FE;
 $black: #2f2f41;
 $white: #ffffff;
 $white-offset: #fff6f8;
@@ -21,8 +24,9 @@ $font-family-base: Helvetica, Arial, sans-serif, -apple-system;
 $font-family-heading: 'Playfair Display', serif, -apple-system;
 
 // Footer
-$footer-background-color: $primary;
+$footer-background-color: #E17367; //$primary;
 $footer-text-color: $white;
+// $sub-footer-background-color: darken($primary, 10%);
 $sub-footer-background-color: darken($primary, 10%);
 $sub-footer-text-color: $white;
 
