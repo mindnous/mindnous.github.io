@@ -17,7 +17,7 @@ featured: true
 
 ---
 
-<img src="images/20240827_sam_pencil.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img src="../../images/20240827_sam_pencil.png" alt="Description" class="img-fluid rounded z-depth-1">
 
 
 It has been 1.5 years since the release of Segment Anything (SAM), where it steals the focus of public with its vast potentials on many fields: medics, factory, analysis, business, labeling, you name it, they (should) have it by then. However, the thing raises a very basic question, "what makes SAM so powerful"? Well, in this post, we're going to find out just that, and so that we could come to undertand the beauty of SAM, potentials of it, and maybe to extend this method on your specific use-cases. Everything that is discussed in here is based on the [basic1](https://towardsdatascience.com/all-you-need-to-know-about-attention-and-transformers-in-depth-understanding-part-1-552f0b41d021) and [basic2](https://www.v7labs.com/blog/vision-transformer-guide) of Transformer and [the original SAM paper](https://arxiv.org/pdf/2304.02643).
@@ -70,7 +70,7 @@ Just a side note, to some extend, attention layer is quite similar to a stack of
     <div class="col-sm mt-3 mt-md-0">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img src="images/blogs/20240827_1_manual_stage.png" alt="Description" class="img-fluid rounded z-depth-1">
+        <img src="../../images/blogs/20240827_1_manual_stage.png" alt="Description" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
     </div>
@@ -89,7 +89,7 @@ In the manual stage, it is basically similar to the normal training with annotat
     <div class="col-sm mt-3 mt-md-0">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img src="images/blogs/20240827_2_semiauto_stage.png" alt="Description" class="img-fluid rounded z-depth-1">
+        <img src="../../images/blogs/20240827_2_semiauto_stage.png" alt="Description" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
     </div>
@@ -108,7 +108,7 @@ In this stage, it is quite similar to the Online Supervised Learning, but with f
     <div class="col-sm mt-3 mt-md-0">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img src="images/blogs/20240827_3_ssl_stage.png" alt="Description" class="img-fluid rounded z-depth-1">
+        <img src="../../images/blogs/20240827_3_ssl_stage.png" alt="Description" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
     </div>

@@ -1,17 +1,17 @@
 [
   {
-    "title": "Free Consultation",
-    "description": "New clients receive an obligation free consultation.",
+    "title": "Telemedical | Consult Health",
+    "description": "Consult our AI Agent to analyze symptomps, predict appropriate diagnoses, and suggestion suitable department assignment.",
     "image": "images/features/noun_branding_1885335.svg"
   },
   {
-    "title": "Certified Accountants",
-    "description": "All members of our team are certified accountants.",
+    "title": "Kids Trainer | Friend | Assistant",
+    "description": "AI Agent for kids as a training, friend, and assistant by using our speech platform.",
     "image": "images/features/noun_The Process_1885341.svg"
   },
   {
-    "title": "Tax Compliance",
-    "description": "We stay up to date on the latest changes to the tax code.",
+    "title": "Optical Character Recognition-OCR",
+    "description": "Use our AI Agent / Computer Vision to identify license plate, receipt detail, and many more.",
     "image": "images/features/noun_3d modeling_1885342.svg"
   }
 ]

@@ -1,6 +1,7 @@
-baseurl: '/jekyll-serif-theme/'
+baseurl: '/'
 permalink: pretty
 title: 'Folksagent'
+host: "0.0.0.0"
 
 google_analytics_id: ""
 
@@ -8,7 +9,7 @@ homepage:
   show_call_box: true
 
 logo:
-  mobile: "images/logo/logo-mobile.svg"
+  mobile: "images/favicon-32x32.svg"
   desktop: "images/logo/logo.svg"
   desktop_height: "36px"
 

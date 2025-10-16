@@ -17,7 +17,7 @@ featured: true
 
 ---
 
-<img src="images/blogs/082424_budget_vs_llama.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img src="../../images/blogs/082424_budget_vs_llama.png" alt="Description" class="img-fluid rounded z-depth-1">
 
 
 
@@ -51,7 +51,7 @@ For your information, I use my own compact PC with M-ATX build, hence why I need
     <div class="col-sm mt-3 mt-md-0">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img src="images/blogs/082424_ss_pcbuild.jpg" alt="Description" class="img-fluid rounded z-depth-1">
+        <img src="../../images/blogs/082424_ss_pcbuild.jpg" alt="Description" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
     </div>
@@ -65,10 +65,10 @@ This step is the easiest step, you can [open the link available in here](https:/
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        <img src="images/blogs/082424_hf_fav.jpg" alt="Description" class="img-fluid rounded z-depth-1">
+        <img src="../../images/blogs/082424_hf_fav.jpg" alt="Description" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img src="images/blogs/082424_hf_dl.jpg" alt="Description" class="img-fluid rounded z-depth-1">
+        <img src="../../images/blogs/082424_hf_dl.jpg" alt="Description" class="img-fluid rounded z-depth-1">
     </div>
 </div>
 
@@ -86,11 +86,11 @@ For Windows users, you can download [the Ollama Setup here](https://github.com/o
 
 In order to use our testing model (Q2_K/INT2), we are going to link the testing model with Ollama:
 a. Create a file that points to the path of our testing model. In this test, I name the file **llama3.1_70b** as in the screenshot below.
-<img src="images/blogs/082424_createmodel.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img src="../../images/blogs/082424_createmodel.png" alt="Description" class="img-fluid rounded z-depth-1">
 b. Create a model that transfer our testing model to Ollama accepted format file. In this test, we call the Ollama's newly created file as **example** as in the figure below.
-<img src="images/blogs/082424_ss_progress_create.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img src="../../images/blogs/082424_ss_progress_create.png" alt="Description" class="img-fluid rounded z-depth-1">
 c. When the create model step is done, it should show the following instructions.
-<img src="images/blogs/082424_ss_finish.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img src="../../images/blogs/082424_ss_finish.png" alt="Description" class="img-fluid rounded z-depth-1">
 
 > ##### Done
 >

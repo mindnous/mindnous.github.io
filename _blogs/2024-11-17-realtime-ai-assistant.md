@@ -13,7 +13,7 @@ featured: true
 
 ## Introduction
 
-<img src="images/blogs/20241117_AI_ASSISTANT.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img src="../../images/blogs/20241117_AI_ASSISTANT.png" alt="Description" class="img-fluid rounded z-depth-1">
 
 > I've reviewed many posts from great reviewers, and realize that sometimes, informative posts could be packed into such simple and short explanation. From now in, I am going to start similar things and hope that you guys could take more from simple things explained below!
 
