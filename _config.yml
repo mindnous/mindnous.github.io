@@ -1,4 +1,4 @@
-baseurl: '/'
+baseurl: 'https://folksagent.com/'
 permalink: pretty
 title: 'Folksagent'
 host: "0.0.0.0"
@@ -11,7 +11,7 @@ homepage:
 logo:
   mobile: "images/favicon-32x32.svg"
   desktop: "images/logo/logo.svg"
-  desktop_height: "36px"
+  desktop_height: "40px"
 
 footer:
   copyright_text: 'copyright @ Folksagent'
