@@ -1,23 +1,27 @@
 main:
-  - name: "Blog"
-    url: "/blogs/"
-  - name: "Services"
-    url: "/services/"
-    weight: 2
-  - name: "Team"
-    url: "/team/"
-    weight: 3
-  - name: "About"
-    url: "/about/"
-    weight: 4
-  - name: "Contact"
-    url: "/contact/"
-    weight: 5
-
-footer:
   - name: "Home"
     url: "/"
     weight: 1
+  - name: "Services"
+    url: "/services/"
+    weight: 2
+  - name: "Blog"
+    url: "/blogs/"
+    weight: 3
   - name: "Contact"
     url: "/contact/"
-    weight: 2
+    weight: 4
+
+footer:
+  - name: "Team"
+    url: "/team/"
+    weight: 5
+  - name: "About"
+    url: "/about/"
+    weight: 6
+#   - name: "Home"
+#     url: "/"
+#     weight: 1
+#   - name: "Contact"
+#     url: "/contact/"
+#     weight: 2

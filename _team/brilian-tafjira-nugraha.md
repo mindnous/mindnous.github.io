@@ -10,10 +10,6 @@ weight: 1
 layout: team
 ---
 
-Hi everyone, I am Brilian Tafjira Nugraha, here to make a place to share ideas and things I did over the years. Some of them might be old, since I rarely post things before, but I realize what kind of impact it has on myself as a self-reminder, and (might be) for other people.
-
-# My Professional Profile
-
 I am a Project Manager/Senior Computer Vision Engineer with 7+ years working as a professional in the Deep learning area: 
 * AI Agent with Large-Language Model (local or Chatgpt/Claude).
 * Object Tracking.
@@ -25,7 +21,7 @@ I am a Project Manager/Senior Computer Vision Engineer with 7+ years working as 
 * Inference Optimization.
 * Unknown picking and detection.
 
-===
+---
 
 # History Project
 
@@ -48,6 +44,8 @@ I am a Project Manager/Senior Computer Vision Engineer with 7+ years working as 
 * Object detection / instance segmentation.
 * Semantic segmentation.
 * Unknown object detection.
+
+---
 
 ## STUDY (Bachelor + Master) 2015 - 2018
 
