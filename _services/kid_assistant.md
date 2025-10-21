@@ -4,6 +4,8 @@ date: 2025-10-16T12:33:46+08:00
 featured: true
 weight: 1
 layout: service
+description: "AI Agent for kids as a training, friend, and assistant by using our speech platform."
+image: "images/features/friend.svg"
 ---
 
 # COMING SOON

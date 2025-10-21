@@ -4,6 +4,8 @@ date: 2025-10-16T12:33:46+08:00
 featured: true
 weight: 1
 layout: service
+description: "Use our AI Agent / Computer Vision to identify license plate, receipt detail, and many more."
+image: "images/features/ocr.svg"
 ---
 
 # COMING SOON

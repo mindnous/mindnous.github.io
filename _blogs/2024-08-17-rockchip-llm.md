@@ -20,7 +20,7 @@ Luckily, smaller LLM models are also available albeits on the lesser accuracy si
 
 So, in this post, I would like to share the happy LLM experiment on the edge device, which also thanks to the [helpful recommendation](https://github.com/Pelochus/ezrknn-llm/issues/13#issuecomment-2285851663).
 
-<img src="images/blogs/rkcomparison.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img src="../../images/blogs/rkcomparison.png" alt="Description" class="img-fluid rounded z-depth-1">
 
 
 <div class="caption">
