@@ -2,16 +2,19 @@
   {
     "title": "Telemedical | Consult Health",
     "description": "Consult our AI Agent to analyze symptomps, predict appropriate diagnoses, and suggestion suitable department assignment.",
-    "image": "images/features/telemedical.svg"
+    "image": "images/features/telemedical.svg",
+    "url": "/services/healthcare/"
   },
   {
     "title": "Kids Trainer | Friend | Assistant",
     "description": "AI Agent for kids as a training, friend, and assistant by using our speech platform.",
-    "image": "images/features/friend.svg"
+    "image": "images/features/friend.svg",
+    "url": "/services/kid_assistant/"
   },
   {
     "title": "Optical Character Recognition-OCR",
     "description": "Use our AI Agent / Computer Vision to identify license plate, receipt detail, and many more.",
-    "image": "images/features/ocr.svg"
+    "image": "images/features/ocr.svg",
+    "url": "/services/ocr/"
   }
 ]
