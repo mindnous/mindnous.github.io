@@ -44,7 +44,7 @@ Traditionally, Convolutional Neural Network utilizes kernels to do local mapping
 
 For this illustration, I will make an example of self-attention layer. In the self-attention layer, we will use our intermediate features in a self-weighting mechanism, where we multiply itself with the same features as a self weighting mechanism, followed by another dot product with itself to produced weighted output, familiarly known as **self attention layer**.
 
-<img src="../../images/blogs/20240827_attention.jpg" alt="Description" class="img-fluid rounded z-depth-1">
+<img src="../../images/blogs/20240827_attention.png" alt="Description" class="img-fluid rounded z-depth-1">
 
 <div class="caption">
     Figure 1. Self-Attention Layer Illustration.  
