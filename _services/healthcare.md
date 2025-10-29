@@ -4,6 +4,7 @@ date: 2025-10-16T12:33:46+08:00
 featured: true
 weight: 1
 layout: service
+category: Telemedicine
 description: "Consult our AI Agent to analyze symptomps, predict appropriate diagnoses, and suggestion suitable department assignment."
 image: "images/features/telemedical.svg"
 ---

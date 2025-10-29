@@ -3,7 +3,6 @@
     "title": "Telemedical | Consult Health",
     "description": "Consult our AI Agent to analyze symptomps, predict appropriate diagnoses, and suggestion suitable department assignment.",
     "image": "images/features/telemedical.svg",
-    "image2": "../images/features/telemedical.svg",
     "url": "/services/healthcare/"
   },
   {
