@@ -20,22 +20,25 @@ bodyClass: page-blogs-list
 
 <div class="container pt-6 pb-6">
   <!-- Debug info -->
-  <p>Blogs: {{ site.blogs | size }} items</p>
+  <!-- <p>Blogs: {{ site.blogs | size }} items</p> -->
   
   <div class="row">
     {% if site.blogs and site.blogs.size > 0 %}
       {% assign weighted_blogs = site.blogs | sort: "weight" %}
-      {% for blog in weighted_blogs %}
-      <div class="col-12 col-md-6 mb-3">
-        <div class="service service-summary">
-          <div class="service-content">
-            <h2 class="service-title">
-              <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
-            </h2>
-            <p>{{ blog.content | markdownify | strip_html | truncate: 100 }}</p>
+      {% for blog in weighted_blogs reversed %}
+        {% if blog.featured  == true %}
+        
+          <div class="col-12 col-md-6 mb-3">
+            <div class="service service-summary">
+              <div class="service-content">
+                <h2 class="service-title">
+                  <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
+                </h2>
+                <p>{{ blog.content | markdownify | strip_html | truncate: 100 }}</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        {% endif %}
       {% endfor %}
     {% else %}
       <p>No blogs found. Check your _blogs folder and front matter.</p>

@@ -7,6 +7,7 @@ categories: Telemedicine
 giscus_comments: true
 related_posts: true
 featured: true
+weight: 2
 ---
 
 ## Introduction
