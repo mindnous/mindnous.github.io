@@ -8,7 +8,7 @@ categories: llm
 thumbnail: images/blogs/082424_budget_vs_llama.png
 giscus_comments: false
 related_posts: true
-featured: true
+featured: false
 ---
 
 ---

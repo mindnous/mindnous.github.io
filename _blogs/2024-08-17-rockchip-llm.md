@@ -8,7 +8,7 @@ categories: llm
 thumbnail: images/blogs/rkcomparison.png
 giscus_comments: true
 related_posts: false
-featured: true
+featured: false
 ---
 
 <video src="{{ 'assets/video/livellm_qwen2_1.5b.mp4' | relative_url }}" controls preload  style="max-width: 100%; height: auto;"></video>

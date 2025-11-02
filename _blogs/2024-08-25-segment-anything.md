@@ -8,7 +8,7 @@ categories: detection
 thumbnail: images/blogs/20240827_sam_pencil.png
 giscus_comments: true
 related_posts: true
-featured: true
+featured: false
 ---
 
 ---

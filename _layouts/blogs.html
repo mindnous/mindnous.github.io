@@ -26,7 +26,6 @@ bodyClass: page-blogs-list
     {% if site.blogs and site.blogs.size > 0 %}
       {% assign weighted_blogs = site.blogs | sort: "weight" %}
       {% for blog in weighted_blogs reversed %}
-        {% if blog.featured  == true %}
         
           <div class="col-12 col-md-6 mb-3">
             <div class="service service-summary">
@@ -38,7 +37,6 @@ bodyClass: page-blogs-list
               </div>
             </div>
           </div>
-        {% endif %}
       {% endfor %}
     {% else %}
       <p>No blogs found. Check your _blogs folder and front matter.</p>
