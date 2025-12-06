@@ -1,5 +1,5 @@
 ---
-layout: service
+layout: blog
 title: Segment Anything Explained
 date: 2024-08-27 19:00:00+0800
 description: A user-friendly explanation on Segment Anything (SAM).

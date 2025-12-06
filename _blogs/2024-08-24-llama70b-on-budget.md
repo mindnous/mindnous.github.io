@@ -1,5 +1,5 @@
 ---
-layout: service
+layout: blog
 title: Testing LLAMA3.1 70B on a Budget PC Build
 date: 2024-08-24 11:00:00+0800
 description: test big LLM on ensembled budget PC.

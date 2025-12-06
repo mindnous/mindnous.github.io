@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <div class="service service-single">
+        <h1 class="title">{{page.title}}</h1>
+        <p>
+          {% assign words = page.content | number_of_words %}
+          {% assign reading_time = words | divided_by: 200 %}
+           # {% if reading_time < 1 %}1{% else %}{{ reading_time }}{% endif %} min read.
+        </p>
+
+        <div class="content">{{content}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip strip-grey">
+  <div class="container pt-6 pb-6">
+    <div class="row">
+      {% assign weighted_blogs = site.blogs | sort: "weight" %}
+      {% for blog in weighted_blogs reversed %}
+        {% if blog.categories contains page.category %}
+        
+          <div class="col-12 col-md-6 mb-3">
+            <div class="service service-summary">
+              <div class="service-content">
+                <h2 class="service-title">
+                  <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
+                </h2>
+                <p>{{ blog.content | markdownify | strip_html | truncate: 100 }}</p>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

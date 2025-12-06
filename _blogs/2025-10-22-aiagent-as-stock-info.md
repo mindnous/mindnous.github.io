@@ -1,5 +1,5 @@
 ---
-layout: service
+layout: blog
 title: Can We Use AI Agent as Stock Assistant (The HALAL Way)
 date: 2025-11-02 22:00:00+0800
 description: Here, we will review how well popular AI Agents to be used as Stock Assistans, in the Halal way.

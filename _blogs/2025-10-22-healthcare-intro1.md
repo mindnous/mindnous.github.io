@@ -1,5 +1,5 @@
 ---
-layout: service
+layout: blog
 title: Telemedicine | Healthcare Intro
 date: 2025-10-26 23:00:00+0800
 description: Introduction of Our Telemedicine/Healthcare Service with Possible Scenarios for Customer Usage.

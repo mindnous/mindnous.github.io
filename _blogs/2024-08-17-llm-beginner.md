@@ -1,5 +1,5 @@
 ---
-layout: service
+layout: blog
 title: LLM Finetuning for Beginner
 date: 2024-08-17 00:00:00+0800
 description: a journey of finetuning LLM on custom dataset.

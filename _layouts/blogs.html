@@ -33,6 +33,9 @@ bodyClass: page-blogs-list
                 <h2 class="service-title">
                   <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
                 </h2>
+                <p>
+                  {{ blog.date | date: "%B %d, %Y at %I:%M %p" }}
+                </p>
                 <p>{{ blog.content | markdownify | strip_html | truncate: 100 }}</p>
               </div>
             </div>

@@ -1,5 +1,5 @@
 ---
-layout: service
+layout: blog
 title: LLM (Large Language-Models) on Rockchip
 date: 2024-08-17 13:00:00+0800
 description: a journey of running LLM on Rockchip Device (Orange pi 5 - RK3588)
