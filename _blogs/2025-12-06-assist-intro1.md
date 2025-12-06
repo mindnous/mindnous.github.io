@@ -13,7 +13,7 @@ weight: 2
 # KidAssist: A Voice-First Learning Companion for Young Learners
 > If you're interested, reach us out at ```folks@folksagent.com```
 
-> It's been some time since our last post, where we shared our ALPHA healthcare service that has a huge potential to be used in Indonesia, if you're interested in the post and haven't checked it yet, feel free [to check it here](./2025-10-22-healthcare-intro1/).
+> It's been some time since our last post, where we shared our ALPHA healthcare service that has a huge potential to be used in Indonesia, if you're interested in the post and haven't checked it yet, feel free [to check it here]({% link _blogs/2025-10-22-healthcare-intro1.md %}).
 
 | Main | Vocabulary Progress | Chat History |
 |---|---|---|
