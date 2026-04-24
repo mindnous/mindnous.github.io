@@ -1,31 +1,39 @@
 .sub-footer {
   background: $sub-footer-background-color;
   color: $sub-footer-text-color;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  @include media-breakpoint-up(md) {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+  padding: 24px 0;
+  border-top: 1px solid rgba($white, 0.05);
   .sub-footer-inner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 16px;
     @include media-breakpoint-up(md) {
       flex-direction: row;
+      align-items: center;
+      gap: 0;
     }
   }
   .copyright {
-    margin-top: 10px;
-    font-size: 14px;
+    font-size: 0.9rem;
+    color: $sub-footer-text-color;
+    margin: 0;
     a {
-      font-weight: bold;
-      color: inherit;
+      font-weight: 600;
+      color: $primary-light;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      &:hover {
+        color: $white;
+      }
     }
   }
   .social {
-    a:first-of-type {
-      margin-left: -10px;
+    a {
+      margin-left: 0;
+      &:first-of-type {
+        margin-left: 0;
+      }
     }
   }
 }

@@ -1,12 +1,12 @@
 .strip {
-  background: white;
+  background: $white;
   background-repeat: no-repeat;
 }
 .strip-white {
-  background-color: white;
+  background-color: $white;
 }
 .strip-grey {
-  background-color: $white-offset;
+  background: linear-gradient(180deg, $gray-100 0%, $gray-200 50%, $gray-100 100%);
 }
 .strip-diagonal {
   transform: skewY(5deg);

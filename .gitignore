@@ -20,3 +20,12 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 .idea
+
+# Documentation (optional - keep if you want to track these)
+# DESIGN_SYSTEM.md
+# IMPROVEMENTS.md
+# CHANGES_SUMMARY.md
+
+# Jupyter notebooks (already excluded in _config.yml)
+assets/jupyter/
+*.ipynb

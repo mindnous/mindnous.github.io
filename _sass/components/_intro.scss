@@ -2,41 +2,46 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   overflow: hidden;
   @include media-breakpoint-up(md) {
     padding-top: 140px;
     padding-bottom: 140px;
   }
   h1 {
-    color: $black;
-    font-size: 42px;
-    font-weight: bold;
+    color: $text-primary;
+    font-size: 2.75rem;
+    font-weight: 800;
     line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+    font-family: $font-family-heading;
     @include media-breakpoint-up(md) {
-      width: 80%;
-      font-size: 48px;
+      width: 90%;
+      font-size: 3.5rem;
     }
     @include media-breakpoint-up(lg) {
-      font-size: 50px;
+      font-size: 4rem;
     }
   }
   h2 {
-    width: 80%;
-    font-size: 1.2rem;
-    line-height: 1.4;
-    margin-bottom: 30px;
-    color: $black;
-    font-family: $font-family-base;
+    width: 90%;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    color: $text-primary;
+    font-family: $font-family-heading;
+    font-weight: 700;
   }
   p {
     font-size: 1.2rem;
-    font-weight: light;
-    line-height: 1.5;
-    color: $steel;
+    font-weight: 400;
+    line-height: 1.8;
+    color: $text-secondary;
+    margin-bottom: 20px;
     @include media-breakpoint-up(md) {
-      width: 80%;
+      width: 90%;
     }
   }
 }

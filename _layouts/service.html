@@ -3,35 +3,57 @@ layout: default
 ---
 
 <div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-  <div class="row justify-content-start">
-    <div class="col-12 col-md-8">
-      <div class="service service-single">
-        <h1 class="title">{{page.title}}</h1>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10">
+      <article class="service service-single page-services-single">
+        {% if page.image %}
+        <header style="text-align: center; margin-bottom: 48px;">
+          <div style="width: 140px; height: 140px; margin: 0 auto 32px; background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; padding: 28px;">
+            <img alt="{{ page.title }} logo" src="{{ page.image | relative_url }}" style="width: 100%; height: auto;" />
+          </div>
+        {% else %}
+        <header style="text-align: center; margin-bottom: 48px;">
+        {% endif %}
+
+          <h1 class="title" style="text-align: center;">{{page.title}}</h1>
+
+          {% if page.description %}
+          <p style="font-size: 1.3rem; text-align: center; color: #64748b; margin-bottom: 40px; line-height: 1.7; max-width: 800px; margin-left: auto; margin-right: auto;">
+            {{ page.description }}
+          </p>
+          {% endif %}
+        </header>
+
         <div class="content">{{content}}</div>
-      </div>
+      </article>
     </div>
   </div>
 </div>
 
-<div class="strip strip-grey">
-  <div class="container pt-6 pb-6">
+{% assign related_posts = site.blogs | where: "categories", page.category | sort: "date" | reverse | limit: 3 %}
+{% if related_posts.size > 0 %}
+<aside class="strip strip-grey">
+  <div class="container pt-6 pb-6 pt-md-8 pb-md-8">
     <div class="row">
-      {% assign weighted_blogs = site.blogs | sort: "weight" %}
-      {% for blog in weighted_blogs reversed %}
-        {% if blog.categories contains page.category %}
-        
-          <div class="col-12 col-md-6 mb-3">
-            <div class="service service-summary">
-              <div class="service-content">
-                <h2 class="service-title">
-                  <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
-                </h2>
-                <p>{{ blog.content | markdownify | strip_html | truncate: 100 }}</p>
+      <div class="col-12 mb-5">
+        <h2 style="font-size: 2rem; font-weight: 700; text-align: center;">Related Articles</h2>
+      </div>
+      {% for blog in related_posts %}
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <article class="service-summary">
+            <div class="service-content">
+              <h3 class="service-title">
+                <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
+              </h3>
+              <div class="blog-meta">
+                <time class="blog-date" datetime="{{ blog.date | date_to_xmlschema }}">{{ blog.date | date: "%b %d, %Y" }}</time>
               </div>
+              <p>{{ blog.content | markdownify | strip_html | truncate: 120 }}</p>
             </div>
-          </div>
-        {% endif %}
+          </article>
+        </div>
       {% endfor %}
     </div>
   </div>
-</div>
+</aside>
+{% endif %}

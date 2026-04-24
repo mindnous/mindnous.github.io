@@ -8,17 +8,23 @@ main:
   - name: "Blog"
     url: "/blogs/"
     weight: 3
+  - name: "About"
+    url: "/about/"
+    weight: 4
   - name: "Contact"
     url: "/contact/"
-    weight: 4
+    weight: 5
 
 footer:
   - name: "Team"
     url: "/team/"
-    weight: 5
+    weight: 1
   - name: "About"
     url: "/about/"
-    weight: 6
+    weight: 2
+  - name: "Contact"
+    url: "/contact/"
+    weight: 3
 #   - name: "Home"
 #     url: "/"
 #     weight: 1

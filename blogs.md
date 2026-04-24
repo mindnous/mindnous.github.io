@@ -1,11 +1,11 @@
 ---
-title: Blogs
+title: Blog
 layout: blogs
 intro_image: "images/illustrations/blog.png"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 ---
 
-# Blogs on AI Agent | Computer Vision
+# AI Insights & Innovations
 
-Explore our explorations and insights of AI and discover how our services or tests help intelligent systems perceive, understand, and interact with the visual world, by breaking down complex concepts into practical knowledge. This blog is also a way for us to contribute to community in demonstrating industry trends and innovative applications of these two topics.
+Explore our journey through AI agents and computer vision. We break down complex concepts into practical knowledge, sharing real-world applications, industry trends, and hands-on experiences. Join us as we contribute to the community by documenting our tests, insights, and discoveries in making intelligent systems more accessible and powerful.

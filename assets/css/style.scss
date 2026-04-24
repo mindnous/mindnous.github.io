@@ -2,33 +2,51 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 ---
 
-// Colors
-// $primary: #E5261F;
-// $secondary: #f88379;
-// $primary: #000080;
-$primary: #6BA2D4;
-$secondary: #0080FE;
-$black: #2f2f41;
-$white: #ffffff;
-$white-offset: #fff6f8;
-$steel: #5C5A5A;
+// Professional Color Palette
+$primary: #2563eb;        // Modern blue - trustworthy, professional
+$primary-light: #60a5fa;  // Light blue for accents
+$primary-dark: #1e40af;   // Dark blue for contrast
+$secondary: #7c3aed;      // Purple accent - innovative, creative
+$accent: #f59e0b;         // Amber for highlights
+$success: #10b981;        // Green for success states
+$info: #0ea5e9;          // Cyan for info
+$warning: #f59e0b;       // Amber for warnings
+
+// Neutral Colors
+$black: #0f172a;         // Rich dark slate
+$gray-900: #1e293b;      // Very dark gray
+$gray-800: #334155;      // Dark gray
+$gray-700: #475569;      // Medium-dark gray
+$gray-600: #64748b;      // Medium gray
+$gray-500: #94a3b8;      // Gray
+$gray-400: #cbd5e1;      // Light-medium gray
+$gray-300: #e2e8f0;      // Light gray
+$gray-200: #f1f5f9;      // Very light gray
+$gray-100: #f8fafc;      // Off-white gray
+$white: #ffffff;         // Pure white
+
+// Semantic Colors
+$steel: $gray-600;
+$white-offset: $gray-100;
+$text-primary: $gray-900;
+$text-secondary: $gray-600;
+$border-color: $gray-300;
 
 // Links
 $link-color: $primary;
 $link-decoration: none;
-$link-hover-color: lighten($primary, 10%);
+$link-hover-color: $primary-dark;
 $link-hover-decoration: underline;
 
 // Fonts
-$font-family-base: Helvetica, Arial, sans-serif, -apple-system;
-$font-family-heading: 'Playfair Display', serif, -apple-system;
+$font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
 // Footer
-$footer-background-color: #E17367; //$primary;
-$footer-text-color: $white;
-// $sub-footer-background-color: darken($primary, 10%);
-$sub-footer-background-color: darken($primary, 30%);
-$sub-footer-text-color: $white;
+$footer-background-color: $gray-900;
+$footer-text-color: $gray-300;
+$sub-footer-background-color: $black;
+$sub-footer-text-color: $gray-400;
 
 // Bootstrap
 @import 'bootstrap-variables';
@@ -58,19 +76,45 @@ $sub-footer-text-color: $white;
 @import 'components/intro-image';
 @import 'components/strip';
 @import 'components/feature';
+@import 'components/service-summary';
 @import 'components/social';
+@import 'components/accessibility';
 
 // Pages
 @import 'pages/home';
 @import 'pages/team/team-summary';
 @import 'pages/services/page-services-single';
 
+// Global Styles
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.6;
   font-family: $font-family-base;
+  color: $text-primary;
+  background-color: $white;
   @include media-breakpoint-up(md) {
     font-size: 16px;
-    line-height: 1.3;
+    line-height: 1.6;
   }
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Selection color
+::selection {
+  background-color: rgba($primary, 0.2);
+  color: $text-primary;
+}
+
+::-moz-selection {
+  background-color: rgba($primary, 0.2);
+  color: $text-primary;
 }

@@ -151,6 +151,5 @@ trainer.save_model("path/to/model")
 
 ## Complete Jupyter Notebook Code
 
-{::nomarkdown}
-{% jupyter_notebook "../../assets/jupyter/FineTuneLLM.ipynb" %}
-{:/nomarkdown}
+<!-- Jupyter notebook integration disabled -->
+For the complete interactive notebook with all code examples, please see the Jupyter notebook file: `assets/jupyter/FineTuneLLM.ipynb`

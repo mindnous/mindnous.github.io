@@ -1,6 +1,6 @@
 .main-menu-mobile {
   position: fixed;
-  background: $primary;
+  background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
   top: 0;
   left: 0;
   width: 100%;
@@ -13,8 +13,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  backdrop-filter: blur(20px);
   &.open {
-    opacity: 0.9;
+    opacity: 0.98;
     visibility: visible;
     height: 100%;
     z-index: 20;
@@ -39,7 +40,7 @@
     }
   }
   ul {
-    font-size: 30px;
+    font-size: 2rem;
     font-family: $font-family-heading;
     text-align: center;
     list-style: none;
@@ -50,15 +51,20 @@
       display: block;
       position: relative;
       opacity: 0;
-      padding: 10px;
+      padding: 16px;
       a {
         display: block;
         position: relative;
-        color: #ffffff;
+        color: $white;
         text-decoration: none;
         overflow: hidden;
+        font-weight: 700;
+        padding: 16px 32px;
+        border-radius: 12px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         &:hover {
-          opacity: 0.8;
+          background-color: rgba($white, 0.2);
+          transform: scale(1.05);
         }
       }
     }

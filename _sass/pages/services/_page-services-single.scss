@@ -2,12 +2,22 @@
   .content {
     > p {
       &:first-of-type {
-        font-size: 1.6rem;
-        line-height: 1.4;
+        font-size: 1.25rem;
+        line-height: 1.8;
         margin-bottom: 40px;
-        font-weight: regular;
-        color: rgb(104, 104, 104);
+        font-weight: 400;
+        color: $text-secondary;
       }
+    }
+  }
+  .service-single {
+    background-color: $white;
+    border-radius: 16px;
+    padding: 48px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    border: 1px solid $border-color;
+    @include media-breakpoint-up(md) {
+      padding: 64px;
     }
   }
 }

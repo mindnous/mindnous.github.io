@@ -18,31 +18,32 @@ bodyClass: page-blogs-list
   </div>
 </div>
 
-<div class="container pt-6 pb-6">
-  <!-- Debug info -->
-  <!-- <p>Blogs: {{ site.blogs | size }} items</p> -->
-  
+<section class="container pt-6 pb-6 pt-md-8 pb-md-8">
   <div class="row">
     {% if site.blogs and site.blogs.size > 0 %}
-      {% assign weighted_blogs = site.blogs | sort: "weight" %}
+      {% assign weighted_blogs = site.blogs | sort: "date" %}
       {% for blog in weighted_blogs reversed %}
-        
-          <div class="col-12 col-md-6 mb-3">
-            <div class="service service-summary">
-              <div class="service-content">
-                <h2 class="service-title">
-                  <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
-                </h2>
-                <p>
-                  {{ blog.date | date: "%B %d, %Y at %I:%M %p" }}
-                </p>
-                <p>{{ blog.content | markdownify | strip_html | truncate: 100 }}</p>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <article class="service-summary">
+            <div class="service-content">
+              <h2 class="service-title">
+                <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
+              </h2>
+              <div class="blog-meta">
+                <time class="blog-date" datetime="{{ blog.date | date_to_xmlschema }}">{{ blog.date | date: "%b %d, %Y" }}</time>
+                {% if blog.categories %}
+                  <span class="blog-category">{{ blog.categories }}</span>
+                {% endif %}
               </div>
+              <p>{{ blog.content | markdownify | strip_html | truncate: 140 }}</p>
             </div>
-          </div>
+          </article>
+        </div>
       {% endfor %}
     {% else %}
-      <p>No blogs found. Check your _blogs folder and front matter.</p>
+      <div class="col-12">
+        <p style="text-align: center; color: #64748b; font-size: 1.1rem;">No blogs found. Check your _blogs folder and front matter.</p>
+      </div>
     {% endif %}
   </div>
-</div>
+</section>

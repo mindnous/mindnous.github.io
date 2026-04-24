@@ -41,7 +41,6 @@ sass:
 
 plugins:
   - jekyll-environment-variables
-  - jekyll-jupyter-notebook
 
 exclude:
   - Gemfile
@@ -54,3 +53,8 @@ exclude:
   - LICENSE.md
   - LICENSE
   - README.md
+  - assets/jupyter/
+  - "*.ipynb"
+  - DESIGN_SYSTEM.md
+  - IMPROVEMENTS.md
+  - CHANGES_SUMMARY.md

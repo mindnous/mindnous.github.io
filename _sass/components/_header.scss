@@ -1,12 +1,13 @@
 .header {
-  color: $primary;
-  background-color: #ffffff;
+  color: $text-primary;
+  background-color: $white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
-  border-bottom: 1px solid $white-offset;
-  padding: 10px 0px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid $border-color;
+  padding: 16px 0;
+  transition: all 0.3s ease;
   .container {
     display: flex;
     justify-content: space-between;
@@ -16,6 +17,12 @@
     position: absolute;
     z-index: 10;
     width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid rgba($white, 0.1);
+    box-shadow: none;
+  }
+  @include media-breakpoint-up(md) {
+    padding: 20px 0;
   }
 }
 .lock-scroll {
