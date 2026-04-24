@@ -4,32 +4,35 @@ layout: default
 
 <div class="container pb-6 pt-6 pt-md-10 pb-md-10">
   <div class="row justify-content-center">
-    <div class="col-12 col-lg-10 col-xl-8">
-      <article class="service service-single">
-        <header>
-          <div class="blog-meta" style="margin-bottom: 24px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <time class="blog-date" datetime="{{ page.date | date_to_xmlschema }}" style="font-size: 1rem; font-weight: 500;">
+    <div class="col-12 col-lg-10 col-xl-9">
+      <article class="service service-single blog-post">
+        <header class="blog-header">
+          <div class="blog-meta-header">
+            <time class="blog-date" datetime="{{ page.date | date_to_xmlschema }}">
               {{ page.date | date: "%B %d, %Y" }}
             </time>
             {% if page.categories %}
-              <span class="blog-category">
-                {{ page.categories }}
-              </span>
+              <span class="blog-category">{{ page.categories }}</span>
             {% endif %}
           </div>
 
           <h1 class="title">{{page.title}}</h1>
 
-          <div style="margin-bottom: 40px; padding-bottom: 28px; border-bottom: 2px solid #e2e8f0;">
-            <p style="font-size: 0.95rem; margin: 0; font-weight: 500; color: #64748b;">
+          {% if page.description %}
+            <p class="blog-description">{{ page.description }}</p>
+          {% endif %}
+
+          <div class="blog-reading-info">
+            <span class="reading-time">
               {% assign words = page.content | number_of_words %}
               {% assign reading_time = words | divided_by: 200 %}
-              {% if reading_time < 1 %}1{% else %}{{ reading_time }}{% endif %} min read
-            </p>
+              ⏱️ {% if reading_time < 1 %}1{% else %}{{ reading_time }}{% endif %} min read
+            </span>
+            <span class="word-count">📄 {{ words }} words</span>
           </div>
         </header>
 
-        <div class="content">{{content}}</div>
+        <div class="content blog-content">{{content}}</div>
       </article>
     </div>
   </div>
@@ -38,22 +41,31 @@ layout: default
 {% assign related_posts = site.blogs | where: "categories", page.categories | where_exp: "item", "item.url != page.url" | sort: "date" | reverse | limit: 3 %}
 {% if related_posts.size > 0 %}
 <aside class="strip strip-grey">
-  <div class="container pt-6 pb-6 pt-md-8 pb-md-8">
-    <div class="row">
-      <div class="col-12 mb-5">
-        <h2 style="font-size: 2rem; font-weight: 700; text-align: center;">Related Posts</h2>
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-center">
+      <div class="col-12 mb-5 text-center">
+        <h2 style="font-size: 2.25rem; font-weight: 700; color: #1e293b; font-family: 'Inter', sans-serif; margin-bottom: 12px;">Related Articles</h2>
+        <p style="color: #64748b; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Continue exploring similar topics</p>
       </div>
       {% for blog in related_posts %}
         <div class="col-12 col-md-6 col-lg-4 mb-4">
           <article class="service-summary">
+            <div class="blog-thumbnail{% unless blog.image %} no-image{% endunless %}">
+              {% if blog.image %}
+                <img src="{{ blog.image | relative_url }}" alt="{{ blog.title }}" loading="lazy">
+              {% endif %}
+            </div>
             <div class="service-content">
               <h3 class="service-title">
                 <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
               </h3>
               <div class="blog-meta">
                 <time class="blog-date" datetime="{{ blog.date | date_to_xmlschema }}">{{ blog.date | date: "%b %d, %Y" }}</time>
+                {% if blog.categories %}
+                  <span class="blog-category">{{ blog.categories }}</span>
+                {% endif %}
               </div>
-              <p>{{ blog.content | markdownify | strip_html | truncate: 120 }}</p>
+              <p>{{ blog.content | markdownify | strip_html | truncate: 100 }}</p>
             </div>
           </article>
         </div>

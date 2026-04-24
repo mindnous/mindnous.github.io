@@ -19,12 +19,9 @@ footer:
   - name: "Team"
     url: "/team/"
     weight: 1
-  - name: "About"
-    url: "/about/"
-    weight: 2
   - name: "Contact"
     url: "/contact/"
-    weight: 3
+    weight: 2
 #   - name: "Home"
 #     url: "/"
 #     weight: 1

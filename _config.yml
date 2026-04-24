@@ -11,7 +11,7 @@ homepage:
 logo:
   mobile: "images/favicon-32x32.svg"
   desktop: "images/logo/logo.svg"
-  desktop_height: "40px"
+  desktop_height: "20px"
 
 footer:
   copyright_text: 'copyright @ Folksagent'

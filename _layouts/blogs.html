@@ -18,32 +18,44 @@ bodyClass: page-blogs-list
   </div>
 </div>
 
-<section class="container pt-6 pb-6 pt-md-8 pb-md-8">
-  <div class="row">
-    {% if site.blogs and site.blogs.size > 0 %}
-      {% assign weighted_blogs = site.blogs | sort: "date" %}
-      {% for blog in weighted_blogs reversed %}
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-          <article class="service-summary">
-            <div class="service-content">
-              <h2 class="service-title">
-                <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
-              </h2>
-              <div class="blog-meta">
-                <time class="blog-date" datetime="{{ blog.date | date_to_xmlschema }}">{{ blog.date | date: "%b %d, %Y" }}</time>
-                {% if blog.categories %}
-                  <span class="blog-category">{{ blog.categories }}</span>
+<section class="strip strip-grey">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-center">
+      {% if site.blogs and site.blogs.size > 0 %}
+        {% assign weighted_blogs = site.blogs | sort: "date" %}
+        {% for blog in weighted_blogs reversed %}
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <article class="service-summary{% if blog.featured %} featured{% endif %}">
+              {% if blog.featured %}
+                <div class="featured-badge">Featured</div>
+              {% endif %}
+
+              <div class="blog-thumbnail{% unless blog.image %} no-image{% endunless %}">
+                {% if blog.image %}
+                  <img src="{{ blog.image | relative_url }}" alt="{{ blog.title }}" loading="lazy">
                 {% endif %}
               </div>
-              <p>{{ blog.content | markdownify | strip_html | truncate: 140 }}</p>
-            </div>
-          </article>
+
+              <div class="service-content">
+                <h2 class="service-title">
+                  <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
+                </h2>
+                <div class="blog-meta">
+                  <time class="blog-date" datetime="{{ blog.date | date_to_xmlschema }}">{{ blog.date | date: "%b %d, %Y" }}</time>
+                  {% if blog.categories %}
+                    <span class="blog-category">{{ blog.categories }}</span>
+                  {% endif %}
+                </div>
+                <p>{{ blog.content | markdownify | strip_html | truncate: 120 }}</p>
+              </div>
+            </article>
+          </div>
+        {% endfor %}
+      {% else %}
+        <div class="col-12">
+          <p style="text-align: center; color: #64748b; font-size: 1.1rem; padding: 60px 20px;">No blogs found. Check your _blogs folder and front matter.</p>
         </div>
-      {% endfor %}
-    {% else %}
-      <div class="col-12">
-        <p style="text-align: center; color: #64748b; font-size: 1.1rem;">No blogs found. Check your _blogs folder and front matter.</p>
-      </div>
-    {% endif %}
+      {% endif %}
+    </div>
   </div>
 </section>
