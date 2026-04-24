@@ -1,15 +1,27 @@
 .title {
   color: $text-primary;
   font-size: 2.5rem;
-  line-height: 1.2;
+  line-height: 1.15;
   font-weight: 800;
-  margin-bottom: 28px;
-  letter-spacing: -1px;
+  margin-bottom: 32px;
+  letter-spacing: -1.2px;
   font-family: $font-family-heading;
+  position: relative;
+  display: inline-block;
+
+  // Subtle gradient text effect
+  background: linear-gradient(135deg, $text-primary 0%, lighten($text-primary, 15%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
   @include media-breakpoint-up(md) {
-    font-size: 3rem;
+    font-size: 3.25rem;
+    letter-spacing: -1.5px;
   }
+
   @include media-breakpoint-up(lg) {
-    font-size: 3.5rem;
+    font-size: 3.75rem;
+    letter-spacing: -2px;
   }
 }

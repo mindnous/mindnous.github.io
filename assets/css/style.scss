@@ -79,16 +79,24 @@ $sub-footer-text-color: $gray-400;
 @import 'components/service-summary';
 @import 'components/social';
 @import 'components/accessibility';
+@import 'components/loading';
 
 // Pages
 @import 'pages/home';
 @import 'pages/team/team-summary';
 @import 'pages/services/page-services-single';
 
-// Global Styles
+// Global Styles & Performance Optimizations
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -97,6 +105,10 @@ body {
   font-family: $font-family-base;
   color: $text-primary;
   background-color: $white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
   @include media-breakpoint-up(md) {
     font-size: 16px;
     line-height: 1.6;
@@ -106,15 +118,42 @@ body {
 // Smooth scrolling
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; // Account for sticky header
 }
 
 // Selection color
 ::selection {
-  background-color: rgba($primary, 0.2);
+  background-color: rgba($primary, 0.25);
   color: $text-primary;
 }
 
 ::-moz-selection {
-  background-color: rgba($primary, 0.2);
+  background-color: rgba($primary, 0.25);
   color: $text-primary;
+}
+
+// Image optimization
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Performance: GPU acceleration for animations
+.feature,
+.service-summary,
+.button {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+// Lazy loading fade-in
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &.loaded {
+    opacity: 1;
+  }
 }
