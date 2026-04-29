@@ -6,35 +6,84 @@
   > ul {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 4px;
+    gap: 0;
     margin: 0;
     padding: 0;
     > li {
       list-style: none;
-      font-size: 0.95rem;
+      position: relative;
+
       > a {
-        padding: 10px 18px;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 14px;
+        font-size: 0.875rem;
         font-weight: 500;
+        letter-spacing: 0.02em;
         text-decoration: none;
-        color: $text-primary;
-        border-radius: 8px;
-        transition: all 0.2s ease;
+        color: $text-secondary;
+        transition: color 0.18s ease;
         position: relative;
+
+        // Animated underline
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 2px;
+          left: 14px;
+          right: 14px;
+          height: 2px;
+          background-color: $primary;
+          border-radius: 2px;
+          transform: scaleX(0);
+          transition: transform 0.2s ease;
+          transform-origin: center;
+        }
+
         &:hover {
-          background-color: $gray-100;
-          color: $primary;
+          color: $text-primary;
+          &::after {
+            transform: scaleX(0.5);
+            opacity: 0.5;
+          }
         }
       }
-      &.active {
+
+      &.active > a {
+        color: $primary;
+        font-weight: 600;
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+
+      // "Contact" — last item as CTA button
+      &:last-child {
+        margin-left: 10px;
         > a {
-          font-weight: 600;
-          background-color: $primary;
           color: $white;
-          &:hover {
-            background-color: $primary-dark;
+          background-color: $primary;
+          padding: 8px 20px;
+          border-radius: 6px;
+          font-weight: 600;
+          letter-spacing: 0.01em;
+          box-shadow: 0 1px 3px rgba($primary, 0.3);
+          transition: background-color 0.18s ease, box-shadow 0.18s ease;
+
+          &::after {
+            display: none;
           }
+
+          &:hover {
+            color: $white;
+            background-color: $primary-dark;
+            box-shadow: 0 4px 12px rgba($primary, 0.35);
+          }
+        }
+
+        &.active > a {
+          background-color: $primary-dark;
+          color: $white;
         }
       }
     }

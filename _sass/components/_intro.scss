@@ -2,23 +2,34 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  min-height: 100vh;
   padding-top: 100px;
   padding-bottom: 100px;
   overflow: hidden;
   position: relative;
 
-  // Subtle background pattern
-  &::before {
+  // Dark overlay for readability
+  &::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: radial-gradient(circle, rgba($primary, 0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-    opacity: 0.5;
-    z-index: -1;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
+
+  .intro-bg {
+    position: absolute;
+    inset: -30px;
+    background-size: cover;
+    background-position: center;
+    filter: blur(14px);
+    transform: scale(1.05);
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
   }
 
   @include media-breakpoint-up(md) {
@@ -26,7 +37,7 @@
     padding-bottom: 140px;
   }
   h1 {
-    color: $text-primary;
+    color: #ffffff;
     font-size: 2.75rem;
     font-weight: 900;
     line-height: 1.15;
@@ -34,6 +45,8 @@
     letter-spacing: -1.5px;
     font-family: $font-family-heading;
     animation: fadeIn 0.8s ease-out;
+    -webkit-text-fill-color: #ffffff;
+    background: none;
 
     @include media-breakpoint-up(md) {
       width: 90%;
@@ -45,21 +58,13 @@
       font-size: 4.5rem;
       letter-spacing: -2.5px;
     }
-
-    // Gradient text on larger screens
-    @include media-breakpoint-up(md) {
-      background: linear-gradient(135deg, $text-primary 0%, lighten($text-primary, 20%) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
   }
   h2 {
     width: 90%;
     font-size: 1.4rem;
     line-height: 1.6;
     margin-bottom: 32px;
-    color: $text-primary;
+    color: rgba(255, 255, 255, 0.9);
     font-family: $font-family-heading;
     font-weight: 700;
   }
@@ -67,7 +72,7 @@
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.8;
-    color: $text-secondary;
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 20px;
     @include media-breakpoint-up(md) {
       width: 90%;

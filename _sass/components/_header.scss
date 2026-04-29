@@ -1,14 +1,14 @@
 .header {
   color: $text-primary;
-  background-color: rgba($white, 0.98);
-  backdrop-filter: blur(10px);
+  background-color: rgba($white, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.06);
-  border-bottom: 1px solid $border-color;
-  padding: 16px 0;
-  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba($border-color, 0.7);
+  padding: 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -17,6 +17,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 64px;
   }
 
   &.header-absolute {
@@ -26,13 +27,14 @@
     box-shadow: none;
   }
 
-  // Scrolled state
   &.scrolled {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.06);
+    background-color: rgba($white, 0.97);
+    border-bottom-color: $border-color;
+    box-shadow: 0 1px 0 $border-color, 0 4px 20px rgba(0, 0, 0, 0.06);
   }
 
   @include media-breakpoint-up(md) {
-    padding: 20px 0;
+    padding: 0;
   }
 }
 .lock-scroll {

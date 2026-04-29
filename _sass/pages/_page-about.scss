@@ -1,0 +1,169 @@
+.page-about {
+  .page-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .service-single {
+    background: $white;
+    border-radius: 24px;
+    padding: 48px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid $border-color;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba($primary, 0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba($secondary, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 72px;
+    }
+
+    .title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: $text-primary;
+      margin-bottom: 40px;
+      font-family: $font-family-heading;
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(135deg, $text-primary 0%, lighten($text-primary, 15%) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+
+      @include media-breakpoint-up(md) {
+        font-size: 3.5rem;
+      }
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+
+      > p:first-of-type {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: $text-primary;
+        margin-bottom: 32px;
+        padding: 24px 28px;
+        background: linear-gradient(135deg, rgba($primary, 0.06) 0%, rgba($secondary, 0.03) 100%);
+        border-left: 4px solid $primary;
+        border-radius: 8px;
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $text-primary;
+        margin-top: 56px;
+        margin-bottom: 24px;
+        font-family: $font-family-heading;
+        position: relative;
+        padding-bottom: 16px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 60px;
+          height: 4px;
+          background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+          border-radius: 2px;
+        }
+      }
+
+      h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $primary;
+        margin-top: 36px;
+        margin-bottom: 16px;
+        font-family: $font-family-heading;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        &::before {
+          content: '';
+          width: 6px;
+          height: 24px;
+          background: linear-gradient(180deg, $primary 0%, $secondary 100%);
+          border-radius: 3px;
+        }
+      }
+
+      p {
+        line-height: 1.8;
+        margin-bottom: 20px;
+        color: $text-secondary;
+        font-size: 1.05rem;
+      }
+
+      strong {
+        color: $text-primary;
+        font-weight: 600;
+      }
+
+      ul, ol {
+        margin: 24px 0;
+        padding-left: 28px;
+
+        li {
+          margin-bottom: 12px;
+          line-height: 1.8;
+          color: $text-secondary;
+
+          &::marker {
+            color: $primary;
+            font-weight: 600;
+          }
+        }
+      }
+
+      blockquote {
+        margin: 32px 0;
+        padding: 24px 32px;
+        background: linear-gradient(135deg, rgba($primary, 0.05) 0%, rgba($secondary, 0.02) 100%);
+        border-left: 5px solid $primary;
+        border-radius: 8px;
+        font-style: italic;
+        color: $text-primary;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      hr {
+        margin: 56px 0;
+        border: none;
+        height: 2px;
+        background: linear-gradient(90deg, transparent 0%, $primary 20%, $secondary 80%, transparent 100%);
+      }
+    }
+  }
+}
