@@ -1,31 +1,20 @@
 ---
-title: Jekyll Serif - Jekyll Small Business Theme
 layout: default
 bodyClass: page-home
 ---
 
-<div class="intro">
-  {% if page.intro_image %}
-  <div class="intro-bg" style="background-image: url('{{ page.intro_image | relURL }}');"></div>
-  {% endif %}
-  <div class="container">
-    <div class="row align-items-center">
-      {% if page.intro_image %}
-      <div class="col-12 col-md-5 col-lg-6 order-2 order-md-2 position-relative">
-        <img alt={{ page.title }} class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relURL }}" />
-      </div>
-
-      <div class="col-12 col-md-7 col-lg-6 order-1 order-md-1">
-        {{ content }}
-      </div>
-      {% endif %}
-    </div>
-  </div>
-</div>
+{{ content }}
 
 {% if site.data.features %}
-<div class="strip strip-grey">
+<section class="strip strip-grey home-services">
   <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-center mb-3 mb-md-5">
+      <div class="col-12 col-md-9 col-lg-7 text-center">
+        <span class="section-tag">What We Build</span>
+        <h2 class="section-heading">AI tools for real-world impact</h2>
+        <p class="section-desc">From healthcare diagnostics to kids learning assistants — we build AI that works for the people who need it most.</p>
+      </div>
+    </div>
     <div class="row justify-content-center">
       {% for feature in site.data.features %}
       <div class="col-12 col-md-6 col-lg-4 mb-2">
@@ -33,7 +22,6 @@ bodyClass: page-home
           {% if feature.image %}
           <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image | relative_url }}" /></div>
           {% endif %}
-
           <a href="{{ feature.url | relative_url }}">
             <h2 class="feature-title">{{ feature.title }}</h2>
           </a>
@@ -41,39 +29,55 @@ bodyClass: page-home
         </div>
       </div>
       {% endfor %}
-
     </div>
-      <div class="row justify-content-center">
-        <div class="col-auto">
-          <a class="button button-primary" href="{{ "services" | relative_url }}">View All Services</a>
-        </div>
+    <div class="row justify-content-center mt-4">
+      <div class="col-auto">
+        <a class="button button-primary" href="{{ "services" | relative_url }}">View All Services</a>
       </div>
+    </div>
   </div>
-</div>
+</section>
 {% endif %}
 
-<div class="strip">
+<section class="strip home-blogs">
   <div class="container pt-6 pb-6 pb-md-10">
+    <div class="row justify-content-center mb-3 mb-md-5">
+      <div class="col-12 col-md-9 col-lg-7 text-center">
+        <span class="section-tag">Latest Insights</span>
+        <h2 class="section-heading">From the blog</h2>
+        <p class="section-desc">News analysis, research, and stories from the AI frontier.</p>
+      </div>
+    </div>
     <div class="row justify-content-start">
-      {% for blog in site.blogs reversed %}
-        {% if blog.featured == true %}
-          <div class="col-12 col-md-4 mb-1">
-            <div class="service service-summary">
-              <div class="service-content">
-                <h2 class="service-title">
-                  <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
-                </h2>
-                <p>{{ blog.content | markdownify | strip_html | truncate: 100 }}</p>
+      {% assign featured_blogs = site.blogs | where: "featured", true | sort: "date" | reverse %}
+      {% for blog in featured_blogs limit: 3 %}
+        <div class="col-12 col-md-4 mb-4">
+          <div class="service service-summary">
+            <div class="blog-thumbnail no-image"></div>
+            <div class="service-content">
+              <div class="blog-meta">
+                {% if blog.categories %}
+                <span class="blog-category">{{ blog.categories }}</span>
+                {% endif %}
+                <span class="blog-date">{{ blog.date | date: "%b %d, %Y" }}</span>
               </div>
+              <h2 class="service-title">
+                <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
+              </h2>
+              {% if blog.description %}
+              <p>{{ blog.description | truncate: 115 }}</p>
+              {% else %}
+              <p>{{ blog.content | markdownify | strip_html | truncate: 100 }}</p>
+              {% endif %}
             </div>
           </div>
-        {% endif %}
+        </div>
       {% endfor %}
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-2">
       <div class="col-auto">
         <a class="button button-primary" href="{{ "blogs" | relative_url }}">View All Blogs</a>
       </div>
     </div>
   </div>
-</div>
+</section>

@@ -1,24 +1,40 @@
 .hamburger {
-  padding: 10px 0 10px 10px;
+  padding: 8px;
   outline: none;
   z-index: 30;
   cursor: pointer;
+  background: rgba($primary, 0.06);
+  border: 1px solid rgba($primary, 0.14);
+  border-radius: 10px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+
   @include media-breakpoint-up(md) {
     display: none;
   }
+
   &:focus {
     outline: none;
   }
+
+  &:hover {
+    background: rgba($primary, 0.11);
+    border-color: rgba($primary, 0.28);
+  }
+
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
     background: $primary;
   }
+
   .hamburger-inner::after {
     width: 18px;
     right: 0;
   }
+
   &.is-active {
+    background: rgba($primary, 0.09);
+
     .hamburger-inner::after {
       width: inherit;
       right: unset;

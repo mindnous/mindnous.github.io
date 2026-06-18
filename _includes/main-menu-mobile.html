@@ -1,10 +1,27 @@
+<div id="menu-backdrop" class="menu-backdrop"></div>
 <div id="main-menu-mobile" class="main-menu-mobile">
-  {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
-  <ul>
-    {% for item in mainmenu %}
-    <li class="{% if item.url == page.url %}active{% endif %}">
-      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-    </li>
-    {% endfor %}
-  </ul>
+  <div class="mobile-menu-header">
+    <a href="{{ site.baseurl }}" class="mobile-menu-logo">
+      <img alt="{{ site.title }}" src="{{ site.logo.desktop | relative_url }}" height="{{ site.logo.desktop_height }}" />
+    </a>
+    <button id="close-menu-mobile" class="mobile-menu-close" aria-label="Close Menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+  <nav class="mobile-menu-nav">
+    {% assign mainmenu = site.data.menus.main | sort: 'weight' %}
+    <ul>
+      {% for item in mainmenu %}
+      <li class="{% if item.url == page.url %}active{% endif %}">
+        <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <div class="mobile-menu-footer">
+    {% include social.html %}
+  </div>
 </div>
