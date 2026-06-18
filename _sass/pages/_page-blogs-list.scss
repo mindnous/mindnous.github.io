@@ -1,0 +1,96 @@
+.page-blogs-list {
+  .strip-grey {
+    background: none;
+    background-image: url('/images/illustrations/blog2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.62);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  // Compact blog card — no thumbnail, glass morphism
+  .blog-card-compact {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+
+    &::after {
+      background: linear-gradient(90deg, $primary-light 0%, $secondary 100%);
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28), 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-content {
+      padding: 20px 22px 22px;
+    }
+
+    .service-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      line-height: 1.4;
+
+      a {
+        color: rgba(255, 255, 255, 0.95);
+
+        &:hover {
+          color: $primary-light;
+          transform: none;
+        }
+      }
+    }
+
+    .blog-meta {
+      margin-bottom: 10px;
+      gap: 8px;
+
+      .blog-date {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.8rem;
+      }
+
+      .blog-category {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.7rem;
+      }
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .featured-badge {
+      top: 12px;
+      right: 12px;
+      font-size: 0.7rem;
+      padding: 4px 10px;
+    }
+  }
+}

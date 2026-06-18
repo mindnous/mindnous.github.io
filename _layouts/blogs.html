@@ -27,18 +27,11 @@ bodyClass: page-blogs-list
       {% if site.blogs and site.blogs.size > 0 %}
         {% assign weighted_blogs = site.blogs | sort: "date" %}
         {% for blog in weighted_blogs reversed %}
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <article class="service-summary{% if blog.featured %} featured{% endif %}">
+          <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <article class="service-summary blog-card-compact{% if blog.featured %} featured{% endif %}">
               {% if blog.featured %}
                 <div class="featured-badge">Featured</div>
               {% endif %}
-
-              <div class="blog-thumbnail{% unless blog.image %} no-image{% endunless %}">
-                {% if blog.image %}
-                  <img src="{{ blog.image | relative_url }}" alt="{{ blog.title }}" loading="lazy">
-                {% endif %}
-              </div>
-
               <div class="service-content">
                 <h2 class="service-title">
                   <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
@@ -49,7 +42,7 @@ bodyClass: page-blogs-list
                     <span class="blog-category">{{ blog.categories }}</span>
                   {% endif %}
                 </div>
-                <p>{{ blog.content | markdownify | strip_html | truncate: 120 }}</p>
+                <p>{{ blog.content | markdownify | strip_html | truncate: 100 }}</p>
               </div>
             </article>
           </div>
