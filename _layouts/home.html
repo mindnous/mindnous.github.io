@@ -3,7 +3,13 @@ layout: default
 bodyClass: page-home
 ---
 
-<div class="home-hero">
+<section class="home-video">
+  <video class="home-video-media" autoplay muted loop playsinline preload="auto"
+         src="{{ '/assets/video/main_video.mp4' | relative_url }}"></video>
+  <div class="home-video-scroll" aria-hidden="true"><span></span></div>
+</section>
+
+<div class="home-hero reveal">
   <div class="container">
     <div class="row justify-content-start align-items-center">
       <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
@@ -11,7 +17,7 @@ bodyClass: page-home
       </div>
       {% if page.intro_image %}
       <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 text-center">
-        <img alt="{{ page.title }}" class="home-hero-image{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" width="600" height="600" decoding="async" fetchpriority="high" />
+        <img alt="{{ page.title }}" class="home-hero-image{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" width="600" height="600" decoding="async" />
       </div>
       {% endif %}
     </div>
@@ -21,7 +27,7 @@ bodyClass: page-home
 {% if site.data.features %}
 <section class="strip strip-grey home-services">
   <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-center mb-3 mb-md-5">
+    <div class="row justify-content-center mb-3 mb-md-5 reveal">
       <div class="col-12 col-md-9 col-lg-7 text-center">
         <span class="section-tag">What We Build</span>
         <h2 class="section-heading">AI tools for real-world impact</h2>
@@ -30,7 +36,7 @@ bodyClass: page-home
     </div>
     <div class="row justify-content-center">
       {% for feature in site.data.features %}
-      <div class="col-12 col-md-6 col-lg-4 mb-2">
+      <div class="col-12 col-md-6 col-lg-4 mb-2 reveal">
         <div class="feature">
           {% if feature.image %}
           <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image | relative_url }}" loading="lazy" decoding="async" /></div>
@@ -43,7 +49,7 @@ bodyClass: page-home
       </div>
       {% endfor %}
     </div>
-    <div class="row justify-content-center mt-4">
+    <div class="row justify-content-center mt-4 reveal">
       <div class="col-auto">
         <a class="button button-primary" href="{{ "services" | relative_url }}">View All Services</a>
       </div>

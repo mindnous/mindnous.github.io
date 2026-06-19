@@ -1,29 +1,80 @@
+// Full-screen intro video. A tiny bit of the next section peeks at the bottom.
+.home-video {
+  position: relative;
+  width: 100%;
+  height: 88vh;
+  height: 88svh;
+  min-height: 420px;
+  overflow: hidden;
+  background: #000;
+  line-height: 0;
+}
+
+.home-video-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+// Subtle "scroll down" cue at the bottom of the video.
+.home-video-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba($white, 0.8);
+  border-radius: 16px;
+  z-index: 2;
+
+  span {
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    width: 4px;
+    height: 8px;
+    margin-left: -2px;
+    border-radius: 4px;
+    background: rgba($white, 0.9);
+    animation: home-video-scroll 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes home-video-scroll {
+  0% { opacity: 0; transform: translateY(0); }
+  40% { opacity: 1; }
+  80% { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 0; }
+}
+
 .home-hero {
-  padding-top: 140px;
+  padding-top: 70px;
   padding-bottom: 60px;
 
   @include media-breakpoint-up(md) {
-    padding-top: 180px;
+    padding-top: 90px;
     padding-bottom: 80px;
   }
 
   h1 {
-    font-size: 2.75rem;
+    font-size: 2rem;
     font-weight: 900;
-    line-height: 1.15;
+    line-height: 1.2;
     margin-bottom: 28px;
-    letter-spacing: -1.5px;
+    letter-spacing: -0.8px;
     font-family: $font-family-heading;
     color: $text-primary;
 
     @include media-breakpoint-up(md) {
-      font-size: 3.75rem;
-      letter-spacing: -2px;
+      font-size: 2.6rem;
+      letter-spacing: -1.2px;
     }
 
     @include media-breakpoint-up(lg) {
-      font-size: 4.5rem;
-      letter-spacing: -2.5px;
+      font-size: 3.1rem;
+      letter-spacing: -1.5px;
     }
   }
 }
@@ -109,4 +160,43 @@
       }
     }
   }
+}
+
+// Scroll-reveal "pop out": sections fade + lift + scale into view as the
+// viewer scrolls. Applied to every section except the intro video.
+// Only hide when JS is available to reveal it again (no-JS = always visible).
+.js .reveal {
+  opacity: 0;
+  transform: translateY(48px) scale(0.96);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+// Stagger the feature cards so they pop one after another.
+.home-services .row .reveal {
+  &:nth-child(2) { transition-delay: 0.08s; }
+  &:nth-child(3) { transition-delay: 0.16s; }
+  &:nth-child(4) { transition-delay: 0.24s; }
+}
+
+// Respect users who prefer no motion / low-end devices: show instantly.
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .home-video-scroll span { animation: none; }
+}
+
+.reduce-motion .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }

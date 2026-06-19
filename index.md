@@ -8,6 +8,6 @@ intro_image_absolute: false
 intro_image_hide_on_mobile: false
 ---
 
-# AI for The People.
+# Removing People are Contrary to What AI Should Do. We Won't Remove People, We Assist them
 
 <!-- Folksagent is a decentralized AI Agent/Computer Vision platform service for Healthcare, Kids assistant, and OCR. -->

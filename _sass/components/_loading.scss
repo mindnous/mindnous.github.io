@@ -1,13 +1,5 @@
 // Loading and Performance Optimizations
 
-// Skeleton loading for images
-img {
-  &[loading="lazy"] {
-    background-color: $gray-200;
-    min-height: 200px;
-  }
-}
-
 // Fade-in animation for content
 @keyframes fadeIn {
   from {

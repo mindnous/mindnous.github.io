@@ -151,8 +151,9 @@ img {
   backface-visibility: hidden;
 }
 
-// Lazy loading fade-in
-img[loading="lazy"] {
+// Lazy loading fade-in (only when JS can mark images as loaded; without JS
+// the images must stay visible).
+.js img[loading="lazy"] {
   opacity: 0;
   transition: opacity 0.3s;
 
