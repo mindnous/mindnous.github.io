@@ -10,7 +10,7 @@ featured: true
 weight: 2
 ---
 
-<img src="../../images/blogs/20251102_aiagent_stock_battle.webp" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251102_aiagent_stock_battle.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 
 ## Flash Summary
@@ -28,7 +28,7 @@ As Large-Language Models AI Agent become more intelligent, many people are using
 
 ### What Stocks Covered and What is the Question?
 
-<img src="../../images/blogs/20251102_bei_ss.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251102_bei_ss.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 There are thousands, if not millions of stocks across the globe, which might not be cost effective for us to cover in this blog. However, since we focus on the "Halal way", let's focus on the 657 Halal stocks listed in Indonesia Stock Exchange (IDX).
 
@@ -47,7 +47,7 @@ Prompt: based on the 2025 trend and the current stock in this list, which stock 
 
 Well regarded as the top Language Model of their time, ChatGPT continuously refine their LLM exploration into vast sectors, such as retail, banking, robotics etc. Hence, let's hear what it says:
 
-<img src="../../images/blogs/20251102_chatgpt_says.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251102_chatgpt_says.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 Perhaps I am not using the **PRO** function in here, but ChatGPT completely skip my IDX list and recommend NVIDIA (NVDA), AMD, or TESLA (TSLA) stocks instead. This seems to be a bit of a trend for me recently. Since ChatGPT is very good at general question and analysis, but fails on more complex/**sensitive** analytics like terminal debugging, localized suggestions for Indonesian language, or this question. Hence, sadly, there is no insight that can be retrieved in here.
 
@@ -58,7 +58,7 @@ Perhaps I am not using the **PRO** function in here, but ChatGPT completely skip
 It is one of my favorite on coding and debugging stuffs! Claude AI Agent has been widely regarded as the **go-to** software related assistant or debugging for developers. Hence, it is not mistaken that they are quite good at more numeric stuff like stocks. Let's see what they said :
 
 
-<img src="../../images/blogs/20251102_claude_says.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251102_claude_says.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 1. Mining & Mineral for EV Vehicles.
 2. Banking & Finance.
@@ -69,7 +69,7 @@ It is one of my favorite on coding and debugging stuffs! Claude AI Agent has bee
 
 Hmm, saying these four seem to be saying that the majority of the stocks are going to be profitable, if not **making a big profit**, which is too optimistic given the current economic instability (especially corruption) in Indonesia. However, Claude's final summary gives quite a good hint about which sectors to go. For example, we are suggested to invest in Mining & Mineral sector for high risk-high return or Banking sector for balanced growth etc.
 
-<img src="../../images/blogs/20251026_tele_start.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251026_tele_start.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 ### What Gemini 2.5-Pro Says
 
@@ -77,7 +77,7 @@ Hmm, saying these four seem to be saying that the majority of the stocks are goi
 
 Backed by the Search Engine giant Google, Gemini is very good at creativity, albeit in our experience and many other users, it hallucinates a lot at coding or on some debugging productivity. However, it excels in the understanding of long context, as it is the first LLM to support 1 Millions of token! Hence, it should be quite capable to analyze the stock/potential profitability. Let's hear what it says:
 
-<img src="../../images/blogs/20251102_gemini_says.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251102_gemini_says.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 1. Mining & Mineral.
 2. Infrastructure.
@@ -91,7 +91,7 @@ The cool thing about Gemini is that it reads from many Indonesia news and invest
 
 Here we go, our favorite on research! This AI Agent tops it in terms of reference and good documentations. The reason is that we can based on their statement to their reference quite easily, and not guessing the AI Agent response on whether it is based on a factual thing backed by a reference, or just another hallucination of it. Let's hear what it says:
 
-<img src="../../images/blogs/20251102_perplexity_says.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251102_perplexity_says.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 1. Mining & Mineral.
 2. Infrastructure.
@@ -134,19 +134,19 @@ From its response, it seems that we are stuck to the Indonesian popular stocks:
 
 1. ANTAM (**ANTM**).
 
-<img src="../../images/blogs/20251102_postnote_1.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251102_postnote_1.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 2. Astra International Tbk (**ASII**).
 
-<img src="../../images/blogs/20251102_postnote_2.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251102_postnote_2.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 3. Telkom Indonesia Persero Tbk (**TLKM**).
 
-<img src="../../images/blogs/20251102_postnote_3.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251102_postnote_3.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 ---
 
-<img src="../../images/blogs/20251102_postnote_summary.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251102_postnote_summary.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 From the summary, we can see that it tries to convince us by explaining why it picks the three stocks while explaining the strong points and resilients of them. And if force it to pick only one stock and explain the reason to choose it like below:
 
@@ -154,7 +154,7 @@ From the summary, we can see that it tries to convince us by explaining why it p
 if I only want to choose one stock, which one will you choose? and why do you choose it?
 ```
 
-<img src="../../images/blogs/20251102_postnote_final.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251102_postnote_final.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 then we are basically suggested to pick **this government company / ANTM** due to 
 it selling criticial mining things (gold, nickel, etc). But again, this is just an example of a way to analyze profitable stock, and don't forget to learn more detail, including their financial report!

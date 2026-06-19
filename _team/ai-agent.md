@@ -2,7 +2,7 @@
 title: "AI Agent"
 date: 2025-10-14T10:47:58+10:00
 draft: false
-image: "images/illustrations/index.png"
+image: "images/illustrations/index.webp"
 jobtitle: "Assistant"
 # linkedinurl: "https://www.linkedin.com/in/brilian-tafjira-nugraha/"
 promoted: true

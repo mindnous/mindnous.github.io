@@ -5,7 +5,7 @@ date: 2024-11-17 23:00:00+0800
 description: Realtime Speech-to-Speech AI Assistant with Speech-to-text (STT), Large-Language Model (LLM), and Text-to-speech (TTS).
 tags: detection
 categories: LLM
-thumbnail: images/blogs/20240908_segment.jpg
+thumbnail: images/blogs/20240908_segment.webp
 giscus_comments: true
 related_posts: true
 featured: true
@@ -13,7 +13,7 @@ featured: true
 
 ## Introduction
 
-<img src="../../images/blogs/20241117_AI_ASSISTANT.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20241117_AI_ASSISTANT.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 > I've reviewed many posts from great reviewers, and realize that sometimes, informative posts could be packed into such simple and short explanation. From now in, I am going to start similar things and hope that you guys could take more from simple things explained below!
 
@@ -74,8 +74,8 @@ And voila! You've successfully started your AI-Assistant.
 
 ## Bob/AI Assistant in Action!
 
-<video src="{{ 'assets/video/20241118_laptop.mp4' | relative_url }}" controls preload  style="max-width: 100%; height: auto;"></video>
-<video src="{{ 'assets/video/20241118_phone.mp4' | relative_url }}" controls preload  style="max-width: 100%; height: auto;"></video>
+<video src="{{ 'assets/video/20241118_laptop.mp4' | relative_url }}" controls preload="none" playsinline  style="max-width: 100%; height: auto;"></video>
+<video src="{{ 'assets/video/20241118_phone.mp4' | relative_url }}" controls preload="none" playsinline  style="max-width: 100%; height: auto;"></video>
 
 ## Current Limitation
 

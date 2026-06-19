@@ -5,7 +5,7 @@ date: 2024-09-07 23:00:00+0800
 description: Application and Usage of Segment Anything (SAM).
 tags: detection
 categories: detection
-thumbnail: images/blogs/20240908_segment.jpg
+thumbnail: images/blogs/20240908_segment.webp
 giscus_comments: true
 related_posts: true
 featured: true
@@ -17,7 +17,7 @@ featured: true
 
 ---
 
-<img src="../../images/blogs/20240908_segment.jpg" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20240908_segment.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 We have talked about what makes Segment Anything (SAM) so powerful, the reasons behind it, and how to run it in the simplest way possible. Now let's dive down on the usage of SAM. For your information, we will focus more on the SAM decoder part, since it is where we could do most of the customization in our detection process (list how many points for detection, how many point will be inferenced in each batch etc). We will start by listing all available important parameters that might affect the accuracy in our test. Then we will test the different parameters on the same image to see the effect and reasoning behind why do we need to change them. In summary, they are as the following: \
 a. Point Grids, Point per-Side, and Points per-Batch. \
@@ -39,7 +39,7 @@ PG = PpS * PpS
 
 In simple term, if you define _PpS = 10_, we will get _10x10 PG_ that will have H/10 and W/10 point region spaces between each point as shown in Fig. 1. Therefore, in case that you have smaller objects with dense scenario, use bigger _PpS=48 or PpS=64_, otherwise use smaller _PpS_.
 
-<img src="../../images/blogs/20240908_pps.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20240908_pps.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 <div class="caption">
     Fig 1. SAM's Point per-Side illustration.
@@ -63,7 +63,7 @@ Meanwhile, Stability Score Threshold (_SST_) and Stability Score Offset (_SSO_)'
 
 ---
 
-<img src="../../images/blogs/20240908_small_dense.jpg" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20240908_small_dense.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 For our illustration, we will test cell image (hard one, dense + small objects) so that you can get a hold on which type of scenarios you are currently trying to tackle.
 
@@ -71,13 +71,13 @@ For our illustration, we will test cell image (hard one, dense + small objects) 
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        <img src="../../images/blogs/20240908_small_dense_res.jpg" alt="Description" class="img-fluid rounded z-depth-1">
+        <img loading="lazy" decoding="async" src="../../images/blogs/20240908_small_dense_res.webp" alt="Description" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img src="../../images/blogs/20240908_small_dense_res_lowthresh.jpg" alt="Description" class="img-fluid rounded z-depth-1">
+        <img loading="lazy" decoding="async" src="../../images/blogs/20240908_small_dense_res_lowthresh.webp" alt="Description" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img src="../../images/blogs/20240908_small_dense_res_pps64.jpg" alt="Description" class="img-fluid rounded z-depth-1">
+        <img loading="lazy" decoding="async" src="../../images/blogs/20240908_small_dense_res_pps64.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
     </div>
 </div>
@@ -95,7 +95,7 @@ For this scenario, setting lower threshold or bigger _PpS_ won't help too much. 
 
 Well, so far, we only test it on medical dataset. Other than medical field, it could also be used for industrial, COCO objects, and much more. For illustration, Here are some COCO and Scene results.
 
-<video src="{{ 'assets/video/20240827_sam_output.mp4' | relative_url }}" controls preload  style="max-width: 100%; height: auto;"></video>
+<video src="{{ 'assets/video/20240827_sam_output.mp4' | relative_url }}" controls preload="none" playsinline  style="max-width: 100%; height: auto;"></video>
 
 ## Conclusion
 

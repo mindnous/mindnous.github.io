@@ -10,7 +10,7 @@ featured: true
 weight: 1
 ---
 
-<img src="../../images/blogs/20260617_mbg.png" alt="MBG News Analysis Juni 2026" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20260617_mbg.webp" alt="MBG News Analysis Juni 2026" class="img-fluid rounded z-depth-1">
 
 ## 10 Berita Terbaru MBG (Per Juni 2026)
 

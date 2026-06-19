@@ -5,7 +5,7 @@ date: 2024-08-27 19:00:00+0800
 description: A user-friendly explanation on Segment Anything (SAM).
 tags: detection
 categories: detection
-thumbnail: images/blogs/20240827_sam_pencil.png
+thumbnail: images/blogs/20240827_sam_pencil.webp
 giscus_comments: true
 related_posts: true
 featured: false
@@ -17,7 +17,7 @@ featured: false
 
 ---
 
-<img src="../../images/blogs/20240827_sam_pencil.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20240827_sam_pencil.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 
 It has been 1.5 years since the release of Segment Anything (SAM), where it steals the focus of public with its vast potentials on many fields: medics, factory, analysis, business, labeling, you name it, they (should) have it by then. However, the thing raises a very basic question, "what makes SAM so powerful"? Well, in this post, we're going to find out just that, and so that we could come to undertand the beauty of SAM, potentials of it, and maybe to extend this method on your specific use-cases. Everything that is discussed in here is based on the [basic1](https://towardsdatascience.com/all-you-need-to-know-about-attention-and-transformers-in-depth-understanding-part-1-552f0b41d021) and [basic2](https://www.v7labs.com/blog/vision-transformer-guide) of Transformer and [the original SAM paper](https://arxiv.org/pdf/2304.02643).
@@ -44,7 +44,7 @@ Traditionally, Convolutional Neural Network utilizes kernels to do local mapping
 
 For this illustration, I will make an example of self-attention layer. In the self-attention layer, we will use our intermediate features in a self-weighting mechanism, where we multiply itself with the same features as a self weighting mechanism, followed by another dot product with itself to produced weighted output, familiarly known as **self attention layer**.
 
-<img src="../../images/blogs/20240827_attention.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20240827_attention.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 <div class="caption">
     Figure 1. Self-Attention Layer Illustration.  
@@ -56,7 +56,7 @@ Just a side note, to some extend, attention layer is quite similar to a stack of
 
 ---
 
-<img src="../../images/blogs/20240827_stages.jpg" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20240827_stages.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 <div class="caption">
     Figure 2. 3 Stages in SAM training: first, they will do manual + online supervised learning, followed by semi-supervised learning in the second stage that is basically similar to the online supervised learning in the first stage, and finalized with self supervised learning in Stage 3 by utilizing self mask scoring + mask stability filter.  
@@ -70,7 +70,7 @@ Just a side note, to some extend, attention layer is quite similar to a stack of
     <div class="col-sm mt-3 mt-md-0">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img src="../../images/blogs/20240827_1_manual_stage.png" alt="Description" class="img-fluid rounded z-depth-1">
+        <img loading="lazy" decoding="async" src="../../images/blogs/20240827_1_manual_stage.webp" alt="Description" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
     </div>
@@ -89,7 +89,7 @@ In the manual stage, it is basically similar to the normal training with annotat
     <div class="col-sm mt-3 mt-md-0">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img src="../../images/blogs/20240827_2_semiauto_stage.png" alt="Description" class="img-fluid rounded z-depth-1">
+        <img loading="lazy" decoding="async" src="../../images/blogs/20240827_2_semiauto_stage.webp" alt="Description" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
     </div>
@@ -108,7 +108,7 @@ In this stage, it is quite similar to the Online Supervised Learning, but with f
     <div class="col-sm mt-3 mt-md-0">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img src="../../images/blogs/20240827_3_ssl_stage.png" alt="Description" class="img-fluid rounded z-depth-1">
+        <img loading="lazy" decoding="async" src="../../images/blogs/20240827_3_ssl_stage.webp" alt="Description" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
     </div>
@@ -126,7 +126,7 @@ In this step, they will output multiple masks (whole, part, and subpart) given a
 
 Well, without further ado, let's do real inference on images, and below are the image outputs resulted from SAM, feel free to use the code and change it to your desired images.
 
-<video src="{{ 'assets/video/20240827_sam_output.mp4' | relative_url }}" controls preload  style="max-width: 100%; height: auto;"></video>
+<video src="{{ 'assets/video/20240827_sam_output.mp4' | relative_url }}" controls preload="none" playsinline  style="max-width: 100%; height: auto;"></video>
 
 ```python
 from segment_anything import SamAutomaticMaskGenerator, sam_model_registry

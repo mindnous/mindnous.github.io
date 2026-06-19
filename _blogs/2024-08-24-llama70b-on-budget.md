@@ -5,7 +5,7 @@ date: 2024-08-24 11:00:00+0800
 description: test big LLM on ensembled budget PC.
 tags: llm
 categories: llm
-thumbnail: images/blogs/082424_budget_vs_llama.png
+thumbnail: images/blogs/082424_budget_vs_llama.webp
 giscus_comments: false
 related_posts: true
 featured: false
@@ -17,7 +17,7 @@ featured: false
 
 ---
 
-<img src="../../images/blogs/082424_budget_vs_llama.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/082424_budget_vs_llama.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 
 
@@ -51,7 +51,7 @@ For your information, I use my own compact PC with M-ATX build, hence why I need
     <div class="col-sm mt-3 mt-md-0">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img src="../../images/blogs/082424_ss_pcbuild.jpg" alt="Description" class="img-fluid rounded z-depth-1">
+        <img loading="lazy" decoding="async" src="../../images/blogs/082424_ss_pcbuild.webp" alt="Description" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
     </div>
@@ -65,10 +65,10 @@ This step is the easiest step, you can [open the link available in here](https:/
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        <img src="../../images/blogs/082424_hf_fav.jpg" alt="Description" class="img-fluid rounded z-depth-1">
+        <img loading="lazy" decoding="async" src="../../images/blogs/082424_hf_fav.webp" alt="Description" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img src="../../images/blogs/082424_hf_dl.jpg" alt="Description" class="img-fluid rounded z-depth-1">
+        <img loading="lazy" decoding="async" src="../../images/blogs/082424_hf_dl.webp" alt="Description" class="img-fluid rounded z-depth-1">
     </div>
 </div>
 
@@ -86,11 +86,11 @@ For Windows users, you can download [the Ollama Setup here](https://github.com/o
 
 In order to use our testing model (Q2_K/INT2), we are going to link the testing model with Ollama:
 a. Create a file that points to the path of our testing model. In this test, I name the file **llama3.1_70b** as in the screenshot below.
-<img src="../../images/blogs/082424_createmodel.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/082424_createmodel.webp" alt="Description" class="img-fluid rounded z-depth-1">
 b. Create a model that transfer our testing model to Ollama accepted format file. In this test, we call the Ollama's newly created file as **example** as in the figure below.
-<img src="../../images/blogs/082424_ss_progress_create.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/082424_ss_progress_create.webp" alt="Description" class="img-fluid rounded z-depth-1">
 c. When the create model step is done, it should show the following instructions.
-<img src="../../images/blogs/082424_ss_finish.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/082424_ss_finish.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 > ##### Done
 >
@@ -105,7 +105,7 @@ Well, the answer is, absolutely YES! I am really happy that we can run the 70B m
 
 Okay, no more nonsense, here is the full record of LLAMA 70B running with 3.9 - 4.45 token/sec.
 
-<video src="{{ 'assets/video/082424_live_llama31_70b.mp4' | relative_url }}" controls preload  style="max-width: 100%; height: auto;"></video>
+<video src="{{ 'assets/video/082424_live_llama31_70b.mp4' | relative_url }}" controls preload="none" playsinline  style="max-width: 100%; height: auto;"></video>
 
 
 > Hope you enjoy the post shared in here and see you in the next post~

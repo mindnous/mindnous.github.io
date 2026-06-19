@@ -14,7 +14,7 @@ bodyClass: page-services-list
       </div>
       {% if page.intro_image %}
       <div class="col-12 col-md-5 col-lg-6 order-2 order-md-2 position-relative">
-        <img alt="{{ page.title }}" class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" />
+        <img alt="{{ page.title }}" class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" decoding="async" />
       </div>
       {% endif %}
     </div>
@@ -51,7 +51,7 @@ bodyClass: page-services-list
           <article class="feature">
             {% if feature.image %}
             <div class="feature-image">
-              <img alt="{{ feature.title }} icon" src="{{ feature.image | relative_url }}" />
+              <img loading="lazy" decoding="async" alt="{{ feature.title }} icon" src="{{ feature.image | relative_url }}" />
             </div>
             {% endif %}
             <h2 class="feature-title">{{ feature.title }}</h2>

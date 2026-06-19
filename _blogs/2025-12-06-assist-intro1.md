@@ -17,7 +17,7 @@ weight: 2
 
 | Main | Vocabulary Progress | Chat History |
 |---|---|---|
-|<img src="../../images/blogs/2025-12-06_22.32_assist1_mobile.jpg" alt="Description" class="img-fluid rounded z-depth-1">|<img src="../../images/blogs/2025-12-06_22.32_assist2_mobile.jpg" alt="Description" class="img-fluid rounded z-depth-1">|<img src="../../images/blogs/2025-12-06_22.32_assist3_mobile.jpg" alt="Description" class="img-fluid rounded z-depth-1">|
+|<img loading="lazy" decoding="async" src="../../images/blogs/2025-12-06_22.32_assist1_mobile.webp" alt="Description" class="img-fluid rounded z-depth-1">|<img loading="lazy" decoding="async" src="../../images/blogs/2025-12-06_22.32_assist2_mobile.webp" alt="Description" class="img-fluid rounded z-depth-1">|<img loading="lazy" decoding="async" src="../../images/blogs/2025-12-06_22.32_assist3_mobile.webp" alt="Description" class="img-fluid rounded z-depth-1">|
 
 
 Hello again! In this episode, we'd like to share our BETA web application designed to help children practice speaking and expand their vocabulary through natural conversation. KidAssist combines speech recognition with an AI agent to create an interactive learning environment that tracks progress and encourages daily practice.
@@ -28,7 +28,7 @@ Hello again! In this episode, we'd like to share our BETA web application design
 
 | Desktop | Mobile |
 |---|---|
-|<img src="../../images/blogs/2025-12-06_22.32_assist1.png" alt="Description" class="img-fluid rounded z-depth-1">|<img src="../../images/blogs/2025-12-06_22.32_assist1_mobile.jpg" alt="Description" class="img-fluid rounded z-depth-1">|
+|<img loading="lazy" decoding="async" src="../../images/blogs/2025-12-06_22.32_assist1.webp" alt="Description" class="img-fluid rounded z-depth-1">|<img loading="lazy" decoding="async" src="../../images/blogs/2025-12-06_22.32_assist1_mobile.webp" alt="Description" class="img-fluid rounded z-depth-1">|
 
 The assistant activates with a simple toggle. Once enabled, children can speak naturally while the system transcribes their words in real-time. The local AI agent processes each conversation and responds through both voice and text, allowing kids to see what they said alongside the assistant's reply. 
 
@@ -40,7 +40,7 @@ The assistant activates with a simple toggle. Once enabled, children can speak n
 
 | Desktop | Mobile |
 |---|---|
-| <img src="../../images/blogs/2025-12-06_22.32_assist2.png" alt="Description" class="img-fluid rounded z-depth-1">| <img src="../../images/blogs/2025-12-06_22.32_assist2_mobile.jpg" alt="Description" class="img-fluid rounded z-depth-1">|
+| <img loading="lazy" decoding="async" src="../../images/blogs/2025-12-06_22.32_assist2.webp" alt="Description" class="img-fluid rounded z-depth-1">| <img loading="lazy" decoding="async" src="../../images/blogs/2025-12-06_22.32_assist2_mobile.webp" alt="Description" class="img-fluid rounded z-depth-1">|
 
 The progress dashboard monitors three aspects of language development:
 
@@ -55,7 +55,7 @@ Every conversation is automatically organized by time. The system saves chat ses
 
 | Desktop | Mobile |
 |---|---|
-|<img src="../../images/blogs/2025-12-06_22.32_assist2.png" alt="Description" class="img-fluid rounded z-depth-1">|<img src="../../images/blogs/2025-12-06_22.32_assist2_mobile.jpg" alt="Description" class="img-fluid rounded z-depth-1">|
+|<img loading="lazy" decoding="async" src="../../images/blogs/2025-12-06_22.32_assist2.webp" alt="Description" class="img-fluid rounded z-depth-1">|<img loading="lazy" decoding="async" src="../../images/blogs/2025-12-06_22.32_assist2_mobile.webp" alt="Description" class="img-fluid rounded z-depth-1">|
 
 This three features will help parents and educators spot patterns in vocabulary growth and identify areas where children are expanding their language use.
 

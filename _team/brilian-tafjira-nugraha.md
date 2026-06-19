@@ -2,7 +2,7 @@
 title: "Brilian Tafjira Nugraha"
 date: 2025-10-14T10:47:58+10:00
 draft: false
-image: "images/team/brilian-tafjira-nugraha.jpg"
+image: "images/team/brilian-tafjira-nugraha.webp"
 jobtitle: "Founder"
 linkedinurl: "https://www.linkedin.com/in/brilian-tafjira-nugraha/"
 promoted: true

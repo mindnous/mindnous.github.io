@@ -5,13 +5,13 @@ date: 2024-08-17 13:00:00+0800
 description: a journey of running LLM on Rockchip Device (Orange pi 5 - RK3588)
 tags: llm rockchip
 categories: llm
-thumbnail: images/blogs/rkcomparison.png
+thumbnail: images/blogs/rkcomparison.webp
 giscus_comments: true
 related_posts: false
 featured: false
 ---
 
-<video src="{{ 'assets/video/livellm_qwen2_1.5b.mp4' | relative_url }}" controls preload  style="max-width: 100%; height: auto;"></video>
+<video src="{{ 'assets/video/livellm_qwen2_1.5b.mp4' | relative_url }}" controls preload="none" playsinline  style="max-width: 100%; height: auto;"></video>
 
 
 <span style="font-size:8vw"> LLM </span> | Large Language-Model, a very familiar topic nowadays that throws community into frenzy due to its potential in smart assistant, AGI etc. However, despite the hype, the harware requirements are also HUGE, to say the least. Simply, we could say goodbye to below 500 USD GPU if we want to run higher LLM specs (> 13B LLM model).
@@ -20,7 +20,7 @@ Luckily, smaller LLM models are also available albeits on the lesser accuracy si
 
 So, in this post, I would like to share the happy LLM experiment on the edge device, which also thanks to the [helpful recommendation](https://github.com/Pelochus/ezrknn-llm/issues/13#issuecomment-2285851663).
 
-<img src="../../images/blogs/rkcomparison.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/rkcomparison.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 
 <div class="caption">

@@ -24,7 +24,7 @@ While major Java provinces boast international-standard medical facilities, popu
 
 ## How MEDIKU Works
 
-<img src="../../images/blogs/20251026_tele.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251026_tele.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 ### Intelligent Department Routing with Administrative Oversight
 
@@ -33,19 +33,19 @@ Currently in active development, **MEDIKU** introduces automated department sele
 ### Step 1: Seamless Symptom Submission
 Patients describe their symptoms through MEDIKU's intuitive interface using text input or voice recognition (currently in beta testing). This flexibility accommodates diverse user preferences and accessibility needs.
 
-<img src="../../images/blogs/20251026_tele_start.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251026_tele_start.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 ### Step 2: AI Agent-Powered Preliminary Analysis
 
 **MEDIKU**'s diagnostic engine analyzes submitted information to identify symptom patterns and potential conditions. The accuracy of this analysis improves with comprehensive patient input, making detailed symptom descriptions essential for optimal results.
 
-<img src="../../images/blogs/20251026_tele_diagnose.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251026_tele_diagnose.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 ### Step 3: Department Recommendation and Preliminary Treatment Guidance
 
 The platform provides two critical outputs: appropriate medical department for consultation and evidence-based preliminary treatment suggestions. The treatment sugggestions will then be reviewed by related physicians to ensure clinical accuracy while giving healthcare providers actionable insights to shorten the consultation timeline.
 
-<img src="../../images/blogs/20251026_tele_solution.png" alt="Description" class="img-fluid rounded z-depth-1">
+<img loading="lazy" decoding="async" src="../../images/blogs/20251026_tele_solution.webp" alt="Description" class="img-fluid rounded z-depth-1">
 
 ## Our Vision with MEDIKU
 

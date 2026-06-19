@@ -11,7 +11,7 @@ bodyClass: page-home
       </div>
       {% if page.intro_image %}
       <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 text-center">
-        <img alt="{{ page.title }}" class="home-hero-image{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" />
+        <img alt="{{ page.title }}" class="home-hero-image{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" width="600" height="600" decoding="async" fetchpriority="high" />
       </div>
       {% endif %}
     </div>
@@ -33,7 +33,7 @@ bodyClass: page-home
       <div class="col-12 col-md-6 col-lg-4 mb-2">
         <div class="feature">
           {% if feature.image %}
-          <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image | relative_url }}" /></div>
+          <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image | relative_url }}" loading="lazy" decoding="async" /></div>
           {% endif %}
           <a href="{{ feature.url | relative_url }}">
             <h2 class="feature-title">{{ feature.title }}</h2>
