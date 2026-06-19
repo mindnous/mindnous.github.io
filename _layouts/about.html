@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="about-page">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-8">
+
+        <header class="about-hero reveal">
+          <span class="about-tag">About Us</span>
+          <h1 class="about-title">{{ page.title }}</h1>
+          {% if page.intro %}
+          <p class="about-intro">{{ page.intro }}</p>
+          {% endif %}
+          {% if page.values %}
+          <div class="about-values">
+            {% for value in page.values %}
+            <span class="about-value">{{ value }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </header>
+
+        {% if page.sections %}
+        <div class="about-cards">
+          {% for section in page.sections %}
+          <section class="about-card reveal">
+            <div class="about-card-icon" aria-hidden="true">{{ section.icon }}</div>
+            <div class="about-card-body">
+              <h2 class="about-card-title">{{ section.title }}</h2>
+              <p>{{ section.body }}</p>
+            </div>
+          </section>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% assign extra = content | strip %}
+        {% if extra != '' %}
+        <div class="about-extra content reveal">{{ content }}</div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
