@@ -1,56 +1,11 @@
+// The services list now shares the home page's content-section styling: a light
+// grey strip with white feature cards and a centered section header. Keeping the
+// look identical to the home page's "What We Build" section makes the two pages
+// feel like one product. The page hero (.intro) still uses the illustration
+// background for contrast.
 .page-services-list {
-  .strip-grey {
-    background: none;
-    background-image: url('/images/illustrations/services.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  .home-services {
     position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.55);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    .feature {
-      background: rgba(255, 255, 255, 0.10);
-      border-color: rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18), 0 1px 4px rgba(0, 0, 0, 0.12);
-
-      .feature-title {
-        color: #ffffff;
-      }
-
-      .feature-content {
-        color: rgba(255, 255, 255, 0.82);
-      }
-
-      .feature-image {
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      }
-
-      &:hover {
-        background: rgba(255, 255, 255, 0.18);
-        border-color: rgba(255, 255, 255, 0.35);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 8px 16px rgba(0, 0, 0, 0.15);
-
-        .feature-title {
-          color: #ffffff;
-        }
-      }
-    }
+    overflow: hidden;
   }
 }

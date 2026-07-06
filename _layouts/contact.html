@@ -4,14 +4,40 @@ layout: default
 bodyClass: page-contact
 ---
 
-<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-start">
-        <div class="col-12 col-md-8">
-            <div class="service service-single">
-                <h1 class="title">{{page.title}}</h1>
-                {% include call.html show_button=false %}
-                <div class="content mt-4">{{content}}</div>
-            </div>
-        </div>
+<div class="contact-page">
+  <div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+
+    <header class="contact-hero reveal">
+      <span class="section-tag">Contact</span>
+      <h1 class="contact-hero-title">{{ page.title }}</h1>
+      <p class="contact-hero-intro">Questions about our services, technical support, or a project you'd like to explore? We'd genuinely love to hear from you — pick whichever way is easiest.</p>
+    </header>
+
+    <div class="contact-methods reveal">
+      {% if site.data.contact.email %}
+      <a class="contact-method" href="mailto:{{ site.data.contact.email }}">
+        <span class="contact-method-icon" aria-hidden="true">✉️</span>
+        <span class="contact-method-label">Email us</span>
+        <span class="contact-method-value">{{ site.data.contact.email }}</span>
+      </a>
+      {% endif %}
+      {% if site.data.contact.phone %}
+      <a class="contact-method" href="tel:{{ site.data.contact.phone | remove: ' ' }}">
+        <span class="contact-method-icon" aria-hidden="true">📞</span>
+        <span class="contact-method-label">Call us</span>
+        <span class="contact-method-value">{{ site.data.contact.phone }}</span>
+      </a>
+      {% endif %}
+      <div class="contact-method contact-method-static">
+        <span class="contact-method-icon" aria-hidden="true">⚡</span>
+        <span class="contact-method-label">Response time</span>
+        <span class="contact-method-value">Within 24 hours on business days</span>
+      </div>
     </div>
+
+    <div class="contact-body reveal">
+      <div class="content">{{ content }}</div>
+    </div>
+
+  </div>
 </div>

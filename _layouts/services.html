@@ -41,12 +41,19 @@ bodyClass: page-services-list
 
 
 
-<section class="strip strip-grey">
+<section class="strip strip-grey home-services">
   <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-center mb-3 mb-md-5 reveal">
+      <div class="col-12 col-md-9 col-lg-7 text-center">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-heading">Intelligent solutions, built to serve</h2>
+        <p class="section-desc">Each service pairs advanced AI and computer vision with a simple, human experience — so the technology stays in the background and the value stays up front.</p>
+      </div>
+    </div>
     <div class="row justify-content-center">
       {% assign sorted_services = site.services | sort: "weight" %}
       {% for feature in sorted_services %}
-      <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="col-12 col-md-6 col-lg-4 mb-4 reveal">
         <a href="{{ feature.url | relative_url }}" style="text-decoration: none;" aria-label="View {{ feature.title }}">
           <article class="feature">
             {% if feature.image %}
@@ -60,6 +67,11 @@ bodyClass: page-services-list
         </a>
       </div>
       {% endfor %}
+    </div>
+    <div class="row justify-content-center mt-4 reveal">
+      <div class="col-auto">
+        <a class="button button-primary" href="{{ "contact" | relative_url }}">Talk to Us</a>
+      </div>
     </div>
   </div>
 </section>

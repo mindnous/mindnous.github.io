@@ -55,3 +55,22 @@
     box-shadow: 0 4px 12px rgba($primary, 0.3);
   }
 }
+
+// Secondary / outline variant — pairs with the solid .button for CTA rows.
+.button-outline {
+  background: transparent;
+  color: $primary;
+  border: 2px solid rgba($primary, 0.35);
+  box-shadow: none;
+
+  &:hover {
+    color: $primary-dark;
+    background: rgba($primary, 0.06);
+    border-color: $primary;
+    box-shadow: 0 8px 20px rgba($primary, 0.15);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}

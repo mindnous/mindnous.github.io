@@ -4,11 +4,9 @@ layout: contact
 bodyClass: page-contact
 ---
 
-## Get In Touch
+## Business Hours (GMT+8)
 
-We'd love to hear from you! Whether you have questions about our services, need technical support, or want to discuss a potential project, our team is here to help.
-
-### Business Hours (GMT+8)
+Our team is available during the hours below. Messages sent outside these times are answered first thing the next business day.
 
 | Day       | Opening Hours    |
 | --------- | ---------------- |
@@ -19,5 +17,3 @@ We'd love to hear from you! Whether you have questions about our services, need 
 | Friday    | 8:30am - 5:00pm  |
 | Saturday  | 10:00am - 12:30pm|
 | Sunday    | Closed           |
-
-We aim to respond to all inquiries within 24 hours during business days.

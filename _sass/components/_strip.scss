@@ -4,6 +4,48 @@
   position: relative;
 }
 
+// Shared section header (eyebrow tag + heading + description). Used across the
+// home and services pages so their content sections stay visually consistent.
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  background: linear-gradient(135deg, rgba($primary, 0.08), rgba($secondary, 0.07));
+  color: $primary;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: 1px solid rgba($primary, 0.18);
+  margin-bottom: 14px;
+}
+
+.section-heading {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: $text-primary;
+  margin-bottom: 14px;
+  font-family: $font-family-heading;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+
+  @include media-breakpoint-up(md) {
+    font-size: 2.4rem;
+    letter-spacing: -0.8px;
+  }
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  color: $text-secondary;
+  line-height: 1.75;
+  margin-bottom: 0;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .strip-white {
   background-color: $white;
 }

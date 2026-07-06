@@ -23,11 +23,18 @@ bodyClass: page-blogs-list
 
 <section class="strip strip-grey">
   <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-center mb-3 mb-md-5 reveal">
+      <div class="col-12 col-md-9 col-lg-7 text-center">
+        <span class="section-tag">From the Blog</span>
+        <h2 class="section-heading">Latest articles &amp; deep-dives</h2>
+        <p class="section-desc">Hands-on write-ups from our work in AI agents, computer vision, and everything we ship along the way.</p>
+      </div>
+    </div>
     <div class="row justify-content-center">
       {% if site.blogs and site.blogs.size > 0 %}
         {% assign weighted_blogs = site.blogs | sort: "date" %}
         {% for blog in weighted_blogs reversed %}
-          <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <div class="col-12 col-md-6 col-lg-4 mb-3 reveal">
             <article class="service-summary blog-card-compact{% if blog.featured %} featured{% endif %}">
               {% if blog.featured %}
                 <div class="featured-badge">Featured</div>
