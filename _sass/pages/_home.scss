@@ -1,13 +1,11 @@
-// Intro video hero. The video keeps its native 16:9 ratio so nothing is
-// cropped (previously `object-fit: cover` clipped the bottom on 16:9 laptops).
-// `max-height` keeps it from pushing the fold too far on very wide screens.
+// Intro video hero. The video always spans the full viewport width and keeps
+// its native 16:9 ratio, so it's never cropped and never letterboxed (no black
+// bars). The section height simply follows the video: on a 16:9 screen it fills
+// the viewport exactly; on a taller ratio (e.g. 16:10) it ends slightly above
+// the fold so the next section peeks; on a wider ratio it extends downward.
 .home-video {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  max-height: 92vh;
-  max-height: 92svh;
-  min-height: 320px;
   overflow: hidden;
   background: #000;
   line-height: 0;
@@ -15,12 +13,7 @@
 
 .home-video-media {
   width: 100%;
-  height: 100%;
-  // `contain` guarantees the full frame is visible (no cropping). Because the
-  // container already matches the video's 16:9 ratio, there are no letterbox
-  // bars on standard screens; the black backdrop covers any edge on odd ratios.
-  object-fit: contain;
-  object-position: center;
+  height: auto;
   display: block;
 }
 
