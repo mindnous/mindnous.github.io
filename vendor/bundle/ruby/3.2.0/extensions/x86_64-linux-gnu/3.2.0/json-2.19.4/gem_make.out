@@ -11,16 +11,16 @@ checking for cpuid.h... yes
 creating Makefile
 
 current directory: /home/brilian/Documents/aiot/mindnous.github.io/vendor/bundle/ruby/3.2.0/gems/json-2.19.4/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20260425-277890-i12fs sitelibdir\=./.gem.20260425-277890-i12fs clean
+make DESTDIR\= sitearchdir\=./.gem.20260706-63901-5zcpse sitelibdir\=./.gem.20260706-63901-5zcpse clean
 
 current directory: /home/brilian/Documents/aiot/mindnous.github.io/vendor/bundle/ruby/3.2.0/gems/json-2.19.4/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20260425-277890-i12fs sitelibdir\=./.gem.20260425-277890-i12fs
+make DESTDIR\= sitearchdir\=./.gem.20260706-63901-5zcpse sitelibdir\=./.gem.20260706-63901-5zcpse
 compiling parser.c
 linking shared-object json/ext/parser.so
 
 current directory: /home/brilian/Documents/aiot/mindnous.github.io/vendor/bundle/ruby/3.2.0/gems/json-2.19.4/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20260425-277890-i12fs sitelibdir\=./.gem.20260425-277890-i12fs install
-/usr/bin/install -c -m 0755 parser.so ./.gem.20260425-277890-i12fs/json/ext
+make DESTDIR\= sitearchdir\=./.gem.20260706-63901-5zcpse sitelibdir\=./.gem.20260706-63901-5zcpse install
+/usr/bin/install -c -m 0755 parser.so ./.gem.20260706-63901-5zcpse/json/ext
 
 current directory: /home/brilian/Documents/aiot/mindnous.github.io/vendor/bundle/ruby/3.2.0/gems/json-2.19.4/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20260425-277890-i12fs sitelibdir\=./.gem.20260425-277890-i12fs clean
+make DESTDIR\= sitearchdir\=./.gem.20260706-63901-5zcpse sitelibdir\=./.gem.20260706-63901-5zcpse clean

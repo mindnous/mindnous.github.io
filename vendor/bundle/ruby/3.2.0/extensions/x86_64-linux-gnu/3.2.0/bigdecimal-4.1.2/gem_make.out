@@ -23,17 +23,17 @@ checking for RUBY_TYPED_EMBEDDABLE in ruby.h... no
 creating Makefile
 
 current directory: /home/brilian/Documents/aiot/mindnous.github.io/vendor/bundle/ruby/3.2.0/gems/bigdecimal-4.1.2/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20260425-277890-95mzcp sitelibdir\=./.gem.20260425-277890-95mzcp clean
+make DESTDIR\= sitearchdir\=./.gem.20260706-63901-qf2joa sitelibdir\=./.gem.20260706-63901-qf2joa clean
 
 current directory: /home/brilian/Documents/aiot/mindnous.github.io/vendor/bundle/ruby/3.2.0/gems/bigdecimal-4.1.2/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20260425-277890-95mzcp sitelibdir\=./.gem.20260425-277890-95mzcp
+make DESTDIR\= sitearchdir\=./.gem.20260706-63901-qf2joa sitelibdir\=./.gem.20260706-63901-qf2joa
 compiling bigdecimal.c
 compiling missing.c
 linking shared-object bigdecimal.so
 
 current directory: /home/brilian/Documents/aiot/mindnous.github.io/vendor/bundle/ruby/3.2.0/gems/bigdecimal-4.1.2/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20260425-277890-95mzcp sitelibdir\=./.gem.20260425-277890-95mzcp install
-/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20260425-277890-95mzcp
+make DESTDIR\= sitearchdir\=./.gem.20260706-63901-qf2joa sitelibdir\=./.gem.20260706-63901-qf2joa install
+/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20260706-63901-qf2joa
 
 current directory: /home/brilian/Documents/aiot/mindnous.github.io/vendor/bundle/ruby/3.2.0/gems/bigdecimal-4.1.2/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20260425-277890-95mzcp sitelibdir\=./.gem.20260425-277890-95mzcp clean
+make DESTDIR\= sitearchdir\=./.gem.20260706-63901-qf2joa sitelibdir\=./.gem.20260706-63901-qf2joa clean
