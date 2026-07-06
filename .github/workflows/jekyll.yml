@@ -10,6 +10,10 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  # Needed to delete stale "github-pages" artifacts left behind by earlier
+  # run attempts (re-runs), which otherwise make deploy-pages fail with
+  # "Multiple artifacts named github-pages were unexpectedly found".
+  actions: write
 
 concurrency:
   group: "pages"
@@ -39,6 +43,23 @@ jobs:
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --verbose
         env:
           JEKYLL_ENV: production
+
+      # On a re-run, GitHub keeps the artifact uploaded by the previous attempt.
+      # Uploading again would leave two "github-pages" artifacts on the run and
+      # break the deploy step. Delete any pre-existing one first so exactly one
+      # remains after the upload below.
+      - name: Remove stale pages artifacts from earlier attempts
+        if: github.run_attempt != '1'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ids=$(gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" \
+            --jq '.artifacts[] | select(.name=="github-pages") | .id')
+          for id in $ids; do
+            echo "Deleting stale github-pages artifact $id"
+            gh api -X DELETE "repos/${{ github.repository }}/actions/artifacts/$id" || true
+          done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
