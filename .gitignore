@@ -2,6 +2,12 @@
 node_modules
 npm-debug.log
 
+# Bundled gems: never commit vendor/bundle. Its compiled native extensions
+# (json, eventmachine, bigdecimal, http_parser.rb) are built for one platform
+# and are ignored by CI's Ruby, breaking the build. CI installs fresh from the
+# committed Gemfile.lock instead.
+vendor/
+
 # Jekyll
 _site
 _site/
