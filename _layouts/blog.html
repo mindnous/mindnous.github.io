@@ -12,7 +12,7 @@ layout: default
               {{ page.date | date: "%B %d, %Y" }}
             </time>
             {% if page.categories %}
-              <span class="blog-category">{{ page.categories }}</span>
+              <span class="blog-category">{{ page.categories | join: ' ' }}</span>
             {% endif %}
           </div>
 
@@ -23,12 +23,10 @@ layout: default
           {% endif %}
 
           <div class="blog-reading-info">
-            <span class="reading-time">
-              {% assign words = page.content | number_of_words %}
-              {% assign reading_time = words | divided_by: 200 %}
-              ⏱️ {% if reading_time < 1 %}1{% else %}{{ reading_time }}{% endif %} min read
-            </span>
-            <span class="word-count">📄 {{ words }} words</span>
+            {% assign words = page.content | number_of_words %}
+            {% assign reading_time = words | divided_by: 200 %}
+            <span class="reading-time">{% if reading_time < 1 %}1{% else %}{{ reading_time }}{% endif %} min read</span>
+            <span class="word-count">{{ words }} words</span>
           </div>
         </header>
 
@@ -38,7 +36,22 @@ layout: default
   </div>
 </div>
 
-{% assign related_posts = site.blogs | where: "categories", page.categories | where_exp: "item", "item.url != page.url" | sort: "date" | reverse | limit: 3 %}
+{% comment %}
+  Related articles: only posts sharing this post's category (case-insensitive,
+  since the data mixes "llm"/"LLM"), most recent first, capped at the top 3.
+  Note: Jekyll has no `limit` filter, so we build the matched list explicitly
+  and `slice` the first 3 rather than relying on `| limit: 3` (a silent no-op).
+{% endcomment %}
+{% assign page_cat = page.categories | downcase %}
+{% assign related_candidates = site.blogs | where_exp: "item", "item.url != page.url" | sort: "date" | reverse %}
+{% assign related_matched = "" | split: "" %}
+{% for blog in related_candidates %}
+  {% assign blog_cat = blog.categories | downcase %}
+  {% if blog_cat == page_cat %}
+    {% assign related_matched = related_matched | push: blog %}
+  {% endif %}
+{% endfor %}
+{% assign related_posts = related_matched | slice: 0, 3 %}
 {% if related_posts.size > 0 %}
 <aside class="strip strip-grey">
   <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
@@ -62,7 +75,7 @@ layout: default
               <div class="blog-meta">
                 <time class="blog-date" datetime="{{ blog.date | date_to_xmlschema }}">{{ blog.date | date: "%b %d, %Y" }}</time>
                 {% if blog.categories %}
-                  <span class="blog-category">{{ blog.categories }}</span>
+                  <span class="blog-category">{{ blog.categories | join: ' ' }}</span>
                 {% endif %}
               </div>
               <p>{{ blog.content | markdownify | strip_html | truncate: 100 }}</p>

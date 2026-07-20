@@ -7,16 +7,16 @@
   .blog-card-compact {
     background: $white;
     border: 1px solid $border-color;
-    border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba($black, 0.05);
 
     &::after {
-      background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+      background: $primary;
     }
 
     &:hover {
-      border-color: rgba($primary, 0.3);
-      box-shadow: 0 20px 44px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.06);
+      border-color: rgba($primary, 0.35);
+      box-shadow: 0 6px 20px rgba($black, 0.08);
     }
 
     .service-content {
@@ -39,20 +39,47 @@
       }
     }
 
+    // One tidy meta row above the title: category · date · (featured).
     .blog-meta {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       gap: 10px;
 
       .blog-date {
-        color: $gray-600;
-        font-size: 0.82rem;
+        color: $gray-500;
+        font-size: 0.8rem;
       }
 
       .blog-category {
-        background: linear-gradient(135deg, rgba($primary, 0.1) 0%, rgba($secondary, 0.1) 100%);
-        border: 1px solid rgba($primary, 0.2);
+        background: rgba($primary, 0.07);
+        border: 1px solid rgba($primary, 0.16);
         color: $primary-dark;
-        font-size: 0.72rem;
+        font-size: 0.7rem;
+      }
+
+      // Subtle "Featured" marker — sits at the end of the meta row instead of a
+      // loud corner badge, so cards stay uniform and uncluttered.
+      .blog-featured {
+        margin-left: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 4px 10px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        color: $accent;
+        background: rgba($accent, 0.1);
+        border: 1px solid rgba($accent, 0.28);
+        border-radius: 7px;
+
+        &::before {
+          content: '';
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: $accent;
+        }
       }
     }
 
@@ -63,19 +90,27 @@
       margin-bottom: 0;
     }
 
-    &.featured {
-      border-color: rgba($primary, 0.6);
-      box-shadow: 0 4px 16px rgba($primary, 0.12), 0 2px 4px rgba($primary, 0.08);
+    // Understated read-more link — a professional affordance in place of the
+    // whole card relying on the title alone.
+    .blog-readmore {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: $primary;
+      text-decoration: none;
+      letter-spacing: 0.2px;
 
       &::after {
-        transform: scaleX(1);
+        @include line-icon($icon-arrow-right, 15px);
+        transition: transform 0.25s ease;
       }
+    }
 
-      // Push content down so the absolutely-positioned "Featured" badge in the
-      // top-right corner never overlaps the title.
-      .service-content {
-        padding-top: 48px;
-      }
+    &:hover .blog-readmore::after {
+      transform: translateX(4px);
     }
   }
 }

@@ -7,13 +7,8 @@
     max-height: 55vh;
     object-fit: contain;
   }
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.02);
-  }
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba($black, 0.12), 0 4px 12px rgba($black, 0.08);
 
   @include media-breakpoint-up(md) {
     max-width: 100%;
@@ -27,7 +22,6 @@
   position: relative;
   display: block;
   margin: 0 auto 24px;
-  animation: float 6s ease-in-out infinite;
 
   @include media-breakpoint-up(md) {
     max-width: none;

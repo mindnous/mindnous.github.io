@@ -118,9 +118,9 @@ BGN menyiapkan skema mengubah kantin sekolah menjadi dapur MBG, khususnya di dae
 
 | Sentimen | Persentase | Faktor Utama |
 |----------|-----------|--------------|
-| 🔴 Negatif | ~55% | Korupsi pejabat BGN, 37.000+ korban keracunan, demo nasional, temuan Komnas HAM |
-| 🟡 Netral | ~25% | Proses penataan anggaran, moratorium dapur baru, kajian status JC Sony Sonjaya |
-| 🟢 Positif | ~20% | Dukungan Gerindra & Luhut, refocusing dinilai bisa buat program lebih tepat sasaran |
+| Negatif | ~55% | Korupsi pejabat BGN, 37.000+ korban keracunan, demo nasional, temuan Komnas HAM |
+| Netral | ~25% | Proses penataan anggaran, moratorium dapur baru, kajian status JC Sony Sonjaya |
+| Positif | ~20% | Dukungan Gerindra & Luhut, refocusing dinilai bisa buat program lebih tepat sasaran |
 
 ---
 

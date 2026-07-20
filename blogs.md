@@ -5,7 +5,6 @@ bodyClass: page-blogs-list
 intro_image: "images/illustrations/blog.webp"
 intro_image_absolute: false
 intro_image_hide_on_mobile: false
-intro_bg_image: "images/illustrations/blog2.webp"
 ---
 
 # Insights & Innovations

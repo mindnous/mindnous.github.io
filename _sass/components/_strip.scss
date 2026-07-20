@@ -10,9 +10,9 @@
   display: inline-flex;
   align-items: center;
   padding: 5px 14px;
-  background: linear-gradient(135deg, rgba($primary, 0.08), rgba($secondary, 0.07));
+  background: rgba($primary, 0.08);
   color: $primary;
-  border-radius: 100px;
+  border-radius: 6px;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.09em;
@@ -22,17 +22,17 @@
 }
 
 .section-heading {
-  font-size: 1.85rem;
-  font-weight: 800;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: $text-primary;
   margin-bottom: 14px;
   font-family: $font-family-heading;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.4px;
   line-height: 1.2;
 
   @include media-breakpoint-up(md) {
-    font-size: 2.4rem;
-    letter-spacing: -0.8px;
+    font-size: 2.2rem;
+    letter-spacing: -0.6px;
   }
 }
 
@@ -51,24 +51,8 @@
 }
 
 .strip-grey {
-  background: linear-gradient(180deg, $gray-50 0%, $gray-100 50%, $gray-50 100%);
+  background: $gray-100;
   position: relative;
-
-  // Subtle pattern overlay
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image:
-      radial-gradient(circle at 25% 25%, rgba($primary, 0.01) 1px, transparent 1px),
-      radial-gradient(circle at 75% 75%, rgba($secondary, 0.01) 1px, transparent 1px);
-    background-size: 50px 50px;
-    opacity: 0.6;
-    pointer-events: none;
-  }
 }
 
 // Add spacing utilities
@@ -96,10 +80,10 @@
   }
 }
 .strip-primary-gradient {
-  background-image: linear-gradient(to right, $primary, $secondary);
+  background-color: $primary;
 }
 .strip-primary-gradient-top-bottom {
-  background-image: linear-gradient(to bottom, $primary, $secondary);
+  background-color: $primary;
 }
 .strip-primary {
   background-color: $primary;

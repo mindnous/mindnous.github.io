@@ -2,12 +2,16 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 ---
 
-// Professional Color Palette
-$primary: #2563eb;        // Modern blue - trustworthy, professional
-$primary-light: #60a5fa;  // Light blue for accents
-$primary-dark: #1e40af;   // Dark blue for contrast
-$secondary: #7c3aed;      // Purple accent - innovative, creative
-$accent: #f59e0b;         // Amber for highlights
+// Professional Color Palette — single restrained teal accent.
+// Everything stays in one hue: the many `$primary -> $secondary` gradients
+// throughout the theme collapse into calm, single-hue surfaces instead of the
+// blue/purple/amber mix that read as "AI-generated".
+$primary: #0f766e;        // Teal 700 - brand accent, trustworthy & distinctive
+$primary-light: #2dd4bf;  // Teal 400 - light accent
+$primary-dark: #115e59;   // Teal 800 - hover / contrast
+$secondary: #115e59;      // Kept in the teal family (no second hue)
+$accent: #0f766e;         // Single accent only
+$hero-bg: #0f2f2c;        // Deep teal-slate for solid hero sections
 $success: #10b981;        // Green for success states
 $info: #0ea5e9;          // Cyan for info
 $warning: #f59e0b;       // Amber for warnings
@@ -60,6 +64,7 @@ $sub-footer-text-color: $gray-400;
 @import 'libraries/hamburgers/hamburgers';
 
 // Components
+@import 'components/icons';
 @import 'components/type';
 @import 'components/page';
 @import 'components/header';

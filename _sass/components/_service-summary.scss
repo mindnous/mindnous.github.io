@@ -1,64 +1,25 @@
 .service-summary {
   height: 100%;
   border: 1px solid $border-color;
-  border-radius: 24px;
+  border-radius: 12px;
   padding: 0;
   background: $white;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 2px rgba($black, 0.05);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 
-  // Gradient accent on hover
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, $primary 0%, $secondary 100%);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 24px 24px 0 0;
-    z-index: 2;
-  }
-
-  // Subtle background gradient
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(145deg, transparent 0%, rgba($primary, 0.02) 100%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 0;
-  }
-
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(0, 0, 0, 0.08);
-    border-color: rgba($primary, 0.3);
-
-    &::after {
-      transform: scaleX(1);
-    }
-
-    &::before {
-      opacity: 1;
-    }
+    box-shadow: 0 6px 20px rgba($black, 0.08);
+    border-color: rgba($primary, 0.35);
   }
   .blog-thumbnail {
     width: 100%;
     height: 220px;
-    background: linear-gradient(135deg, rgba($primary, 0.08) 0%, rgba($secondary, 0.08) 100%);
-    border-radius: 24px 24px 0 0;
+    background: rgba($primary, 0.06);
+    border-radius: 12px 12px 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,10 +36,11 @@
 
     // Icon placeholder for posts without images
     &.no-image {
+      color: rgba($primary, 0.35);
+
       &::before {
-        content: '📝';
-        font-size: 4rem;
-        opacity: 0.3;
+        @include line-icon($icon-file-text, 56px);
+        stroke-width: 1.5;
       }
     }
   }
@@ -114,12 +76,11 @@
     a {
       color: $text-primary;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: color 0.2s ease;
       display: block;
 
       &:hover {
         color: $primary;
-        transform: translateX(4px);
       }
     }
   }
@@ -135,58 +96,45 @@
     .blog-date {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 7px;
       font-weight: 500;
       color: $gray-600;
 
       &::before {
-        content: '📅';
-        font-size: 0.9rem;
+        @include line-icon($icon-calendar, 15px);
+        color: $gray-500;
       }
     }
 
     .blog-category {
       padding: 6px 14px;
-      background: linear-gradient(135deg, rgba($primary, 0.1) 0%, rgba($secondary, 0.1) 100%);
+      background: rgba($primary, 0.08);
       color: $primary-dark;
-      border-radius: 8px;
+      border-radius: 6px;
       font-size: 0.75rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.6px;
-      border: 1px solid rgba($primary, 0.2);
-      transition: all 0.3s ease;
+      border: 1px solid rgba($primary, 0.18);
     }
-  }
-
-  &:hover .blog-category {
-    background: linear-gradient(135deg, rgba($primary, 0.15) 0%, rgba($secondary, 0.15) 100%);
-    border-color: rgba($primary, 0.4);
-    transform: translateY(-2px);
   }
 
   // Featured post badge
   &.featured {
-    border-color: $primary;
-    box-shadow: 0 4px 16px rgba($primary, 0.15), 0 2px 4px rgba($primary, 0.1);
-
-    &::after {
-      transform: scaleX(1);
-    }
+    border-color: rgba($primary, 0.55);
 
     .featured-badge {
       position: absolute;
       top: 16px;
       right: 16px;
-      background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+      background: $primary;
       color: $white;
       padding: 6px 12px;
-      border-radius: 8px;
+      border-radius: 6px;
       font-size: 0.75rem;
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      box-shadow: 0 4px 12px rgba($primary, 0.4);
       z-index: 3;
     }
   }

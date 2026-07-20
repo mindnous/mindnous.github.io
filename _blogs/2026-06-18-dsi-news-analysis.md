@@ -16,7 +16,7 @@ Kasus PT Dana Syariah Indonesia (DSI) memasuki fase intensif: berkas mulai dilim
 
 ---
 
-## 🔴 Daftar Tersangka
+## Daftar Tersangka
 
 Total **5 tersangka perorangan + Korporasi (PT DSI)** dalam proses pemberkasan.
 
@@ -30,21 +30,21 @@ Total **5 tersangka perorangan + Korporasi (PT DSI)** dalam proses pemberkasan.
 
 ---
 
-## 🔗 Koneksi Bisnis
+## Koneksi Bisnis
 
 - **Dude Herlino & Alyssa Soebandono** — Brand ambassador PT DSI (2022–2025). Sudah diperiksa sebagai saksi di Bareskrim pada 2 April 2026, dan menegaskan tidak ada keterkaitan dengan manajemen internal perusahaan.
 - **Fithri Hadi (FH)** — Mantan Direktur Operasional & Sarana Sistem Informasi OJK (2014–2017) → Direktur Grup Inovasi Keuangan Digital OJK (2017–2018) → pejabat BEI. Menjabat sebagai founder & advisor PT DSI. Penetapannya sebagai tersangka adalah hasil pengembangan penyidikan terhadap TA, ARL, MY, dan AS.
 
 ---
 
-## 🎯 Potensi Tersangka & Berkas Baru
+## Potensi Tersangka & Berkas Baru
 
 - **Korporasi (PT DSI)** — Penyidik tengah mengoptimalkan penelusuran aset di beberapa lokasi untuk pemberkasan **Berkas IV** atas subjek hukum korporasi.
 - **Aset tersangka AS (Berkas II)** — Penyidik sedang mengecek dan akan menyita aset AS, direncanakan dikirim ke JPU pada minggu ketiga Juni 2026.
 
 ---
 
-## 📰 Berita Terkini
+## Berita Terkini
 
 ### 1. Berkas I (P21) Dilimpahkan ke Kejari Depok
 Berkas Perkara I untuk 3 tersangka (TA, MY, ARL) telah dilimpahkan ke JPU pada **9 Juni 2026** di Kejaksaan Negeri Depok.
@@ -70,7 +70,7 @@ Warganet di media sosial masih menyayangkan kesenjangan besar antara kerugian **
 
 ---
 
-## 📌 Ringkasan
+## Ringkasan
 
 Kasus DSI memasuki fase intensif dengan pelimpahan berkas ke JPU, penetapan tersangka baru (FH), dan proses restitusi yang mulai berjalan. **Gap antara kerugian korban dan aset tersita** masih menjadi isu utama yang memicu kekecewaan publik.
 

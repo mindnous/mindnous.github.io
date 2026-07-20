@@ -60,21 +60,21 @@
 
   h1 {
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 1.2;
     margin-bottom: 28px;
-    letter-spacing: -0.8px;
+    letter-spacing: -0.5px;
     font-family: $font-family-heading;
     color: $text-primary;
 
     @include media-breakpoint-up(md) {
-      font-size: 2.6rem;
-      letter-spacing: -1.2px;
+      font-size: 2.5rem;
+      letter-spacing: -0.8px;
     }
 
     @include media-breakpoint-up(lg) {
-      font-size: 3.1rem;
-      letter-spacing: -1.5px;
+      font-size: 3rem;
+      letter-spacing: -1px;
     }
   }
 }
@@ -83,15 +83,10 @@
   width: 100%;
   max-width: 480px;
   height: auto;
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba($black, 0.1), 0 2px 8px rgba($black, 0.06);
   display: block;
   margin: 0 auto 24px;
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.02);
-  }
 
   @include media-breakpoint-up(md) {
     margin: 0 auto;
@@ -107,15 +102,15 @@
   .home-blogs {
     .service-summary {
       .blog-thumbnail.no-image {
-        background: linear-gradient(135deg, rgba($primary, 0.08) 0%, rgba($secondary, 0.1) 100%);
+        background: rgba($primary, 0.06);
 
         &::before {
           content: '';
           display: block;
           width: 48px;
           height: 48px;
-          border-radius: 14px;
-          background: linear-gradient(135deg, rgba($primary, 0.2), rgba($secondary, 0.2));
+          border-radius: 12px;
+          background: rgba($primary, 0.18);
         }
       }
     }
@@ -127,9 +122,8 @@
 // Only hide when JS is available to reveal it again (no-JS = always visible).
 .js .reveal {
   opacity: 0;
-  transform: translateY(48px) scale(0.96);
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
   will-change: opacity, transform;
 }
 

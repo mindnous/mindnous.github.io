@@ -4,9 +4,6 @@ bodyClass: page-blogs-list
 ---
 
 <div class="intro">
-  {% if page.intro_bg_image %}
-  <div class="intro-bg" style="background-image: url('{{ page.intro_bg_image | relative_url }}');"></div>
-  {% endif %}
   <div class="container">
     <div class="row justify-content-start">
       <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1" style="position: relative; z-index: 2;">
@@ -35,21 +32,22 @@ bodyClass: page-blogs-list
         {% assign weighted_blogs = site.blogs | sort: "date" %}
         {% for blog in weighted_blogs reversed %}
           <div class="col-12 col-md-6 col-lg-4 mb-3 reveal">
-            <article class="service-summary blog-card-compact{% if blog.featured %} featured{% endif %}">
-              {% if blog.featured %}
-                <div class="featured-badge">Featured</div>
-              {% endif %}
+            <article class="service-summary blog-card-compact">
               <div class="service-content">
+                <div class="blog-meta">
+                  {% if blog.categories %}
+                    <span class="blog-category">{{ blog.categories | join: ' ' }}</span>
+                  {% endif %}
+                  <time class="blog-date" datetime="{{ blog.date | date_to_xmlschema }}">{{ blog.date | date: "%b %d, %Y" }}</time>
+                  {% if blog.featured %}
+                    <span class="blog-featured">Featured</span>
+                  {% endif %}
+                </div>
                 <h2 class="service-title">
                   <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
                 </h2>
-                <div class="blog-meta">
-                  <time class="blog-date" datetime="{{ blog.date | date_to_xmlschema }}">{{ blog.date | date: "%b %d, %Y" }}</time>
-                  {% if blog.categories %}
-                    <span class="blog-category">{{ blog.categories }}</span>
-                  {% endif %}
-                </div>
                 <p>{{ blog.content | markdownify | strip_html | truncate: 100 }}</p>
+                <a class="blog-readmore" href="{{ blog.url | relative_url }}">Read article</a>
               </div>
             </article>
           </div>
