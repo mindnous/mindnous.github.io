@@ -8,8 +8,10 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
-Gemfile.lock
-**/Gemfile.lock
+# Gemfile.lock is intentionally tracked: ruby/setup-ruby's `bundler-cache: true`
+# needs a committed lockfile for deterministic installs. Without it, CI resolves
+# dependencies fresh and pulls newer gems (e.g. json 2.21.1) that its restored
+# cache lacks -> "Could not find json-x in locally installed gems".
 
 # Temporary files
 tmp
